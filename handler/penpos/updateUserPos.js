@@ -1,7 +1,7 @@
 import db from "../../config/database.js";
 import { checkToken } from "../../config/checkToken.js";
 
-export const getPos = async (req, res) => {
+export const updateUserPos = async (req, res) => {
   try {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -26,24 +26,17 @@ export const getPos = async (req, res) => {
         message: "ID pengguna tidak ditemukan.",
       });
     }
-    const [rows] = await db.execute(
-      "SELECT * FROM pos_game WHERE penpos_id = ?",
-      [userId]
+
+    const current_pos = req.body.current_pos;
+
+    await db.execute(
+      "UPDATE user SET current_pos = ? WHERE id = ?",
+      [current_pos, userId]
     );
 
-    if (rows.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "Pos tidak ditemukan!",
-      });
-    }
-    const pos = rows[0];
     return res.status(200).json({
       success: true,
-      message: "Berhasil mendapatkan posisi penpos!",
-      data: {
-        pos: pos,
-      },
+      message: "Berhasil update current_pos peserta!",
     });
   } catch (error) {
     console.error("ERROR GET POS:", error);

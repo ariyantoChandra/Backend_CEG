@@ -1,7 +1,8 @@
 import db from "../../config/database.js";
 import { checkToken } from "../../config/checkToken.js";
 
-export const getPos = async (req, res) => {
+
+export const getListTeam = async (req, res) => {
   try {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -26,23 +27,26 @@ export const getPos = async (req, res) => {
         message: "ID pengguna tidak ditemukan.",
       });
     }
+
+    const current_pos = req.body.current_pos;
+    
     const [rows] = await db.execute(
-      "SELECT * FROM pos_game WHERE penpos_id = ?",
-      [userId]
+      "SELECT u.id, u.nama_tim, p.penpos_id, p.name_pos FROM user u INNER JOIN pos_game p ON u.current_pos = p.id WHERE u.current_pos = ?",
+      [current_pos]
     );
 
     if (rows.length === 0) {
       return res.status(404).json({
         success: false,
-        message: "Pos tidak ditemukan!",
+        message: "Tidak ada tim yang bermain!",
       });
     }
-    const pos = rows[0];
+    const list_tim = rows[0];
     return res.status(200).json({
       success: true,
-      message: "Berhasil mendapatkan posisi penpos!",
+      message: "Berhasil mendapatkan tim!",
       data: {
-        pos: pos,
+        tim: list_tim,
       },
     });
   } catch (error) {

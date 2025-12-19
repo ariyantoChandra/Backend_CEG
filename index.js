@@ -37,7 +37,6 @@ app.get("/", (req, res) => {
 // Ini berarti url loginnya jadi: http://localhost:5000/auth/login
 app.use("/auth", authRoutes); 
 
-// PERBAIKAN: Masukkan variable PORT ke dalam listen
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

@@ -1,7 +1,7 @@
 import db from "../../config/database.js";
 import { checkToken } from "../../config/checkToken.js";
 
-export const getCard = async (req, res) => {
+export const createGameSession = async (req, res) => {
   try {
     const { tim1, tim2 } = req.body;
     const authHeader = req.headers.authorization;

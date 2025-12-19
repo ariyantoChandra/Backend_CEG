@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import BlacklistToken from "../models/BlacklistToken.js";
 
 const checkToken = (token) => {
   try {
@@ -13,9 +12,5 @@ const checkToken = (token) => {
   }
 };
 
-export const isBlacklisted = async (token) => {
-  const blacklisted = await BlacklistToken.findOne({ token });
-  return !!blacklisted;
-};
 
 export default checkToken;

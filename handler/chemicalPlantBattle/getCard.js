@@ -1,5 +1,5 @@
 import db from "../../config/database.js";
-import { checkToken, isBlacklisted } from "../../config/checkToken.js";
+import { checkToken } from "../../config/checkToken.js";
 
 export const getCard = async (req, res) => {
   try {
@@ -18,12 +18,6 @@ export const getCard = async (req, res) => {
       return res.status(401).json({
         success: false,
         message: expired ? "Token expired." : "Token invalid.",
-      });
-    }
-    if (await isBlacklisted(token)) {
-      return res.status(401).json({
-        success: false,
-        message: "Token tidak valid. Login ulang diperlukan.",
       });
     }
     if (!userId) {

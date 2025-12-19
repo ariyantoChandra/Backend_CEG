@@ -43,8 +43,8 @@ export const getCard = async (req, res) => {
       success: true,
       message: "Login Berhasil",
       data: {
-        id: user.id,
-        tim: user.nama_tim,
+        id: decoded.id,
+        tim: decoded.nama_tim,
         cards: card,
       },
     });

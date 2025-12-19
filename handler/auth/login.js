@@ -1,6 +1,9 @@
 // BACKEND/handler/auth/login.js
 
 import db from "../../config/database.js";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const login = async (req, res) => {
   // 1. Cek data yang dikirim frontend
@@ -33,6 +36,15 @@ export const login = async (req, res) => {
       });
     }
 
+    const payload = {
+      id: user.id,
+      tim: user.nama_tim,
+    };
+
+    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "7d",
+    });
+
     return res.status(200).json({
       success: true,
       message: "Login Berhasil",
@@ -40,6 +52,7 @@ export const login = async (req, res) => {
         id: user.id,
         nama_tim: user.nama_tim,
         role: user.role,
+        token: token,
       },
     });
   } catch (error) {

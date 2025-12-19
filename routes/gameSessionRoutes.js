@@ -3,6 +3,6 @@ import express from "express";
 
 const router = express.Router();
 
-router.get("/create", createGameSession);
+router.post("/create", createGameSession);
 
 export default router;

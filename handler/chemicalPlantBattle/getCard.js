@@ -27,11 +27,11 @@ export const getCard = async (req, res) => {
       });
     }
 
-    const { game_session_id } = req.body;
+    const { game_session_id, pos_game_id } = req.body;
 
     const [findGameSession] = await db.execute(
-      "SELECT * FROM game_session WHERE id = ? && end_time IS NULL",
-      [game_session_id]
+      "SELECT tim1_id, tim2_id FROM game_session WHERE id = ? && pos_game_id = ? && end_time IS NULL",
+      [game_session_id, pos_game_id]
     );
 
     if (findGameSession.length === 0) {
@@ -41,25 +41,30 @@ export const getCard = async (req, res) => {
       });
     }
 
-    const [rows] = await db.execute("SELECT * FROM card WHERE user_id = ?", [
-      userId,
-    ]);
+    const { tim1_id, tim2_id } = findGameSession[0];
 
-    if (rows.length === 0) {
+    const [cards] = await db.execute(
+      "SELECT asam_kuat, asam_lemah, netral, basa_kuat, asam_lemah FROM card WHERE user_id IN (?, ?)",
+      [tim1_id, tim2_id]
+    );
+
+    if (cards.length === 0) {
       return res.status(404).json({
         success: false,
         message: "Card tidak ditemukan!",
       });
     }
-    const card = rows[0];
+    const cards1 = cards[0];
+    const cards2 = cards[1];
 
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan kartu awal!",
       data: {
-        id: decoded.id,
-        tim: decoded.tim,
-        cards: card,
+        tim1: tim1_id,
+        card_tim1: cards1,
+        tim2: tim2_id,
+        card_tim2: cards2,
       },
     });
   } catch (error) {

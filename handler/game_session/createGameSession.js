@@ -4,6 +4,7 @@ import { checkToken } from "../../config/checkToken.js";
 export const createGameSession = async (req, res) => {
   try {
     const { tim1, tim2 } = req.body;
+
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       return res.status(401).json({
@@ -11,6 +12,7 @@ export const createGameSession = async (req, res) => {
         message: "There is no Token sent!",
       });
     }
+
     const token = authHeader.split(" ")[1];
     const { valid, expired, decoded } = checkToken(token);
     const userId = decoded.id;
@@ -21,6 +23,7 @@ export const createGameSession = async (req, res) => {
         message: expired ? "Token expired." : "Token invalid.",
       });
     }
+
     if (!userId) {
       return res.status(401).json({
         success: false,
@@ -65,7 +68,7 @@ export const createGameSession = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("ERROR GET CARD:", error);
+    console.error("ERROR CREATE GAME SESSION:", error);
     return res.status(500).json({
       success: false,
       message: "Terjadi kesalahan server: " + error.message,

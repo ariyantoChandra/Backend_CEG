@@ -1,5 +1,5 @@
-import { getListPos } from "../handler/penpos/getListPos.js";
-import { updateUserPos } from "../handler/penpos/updateUserPos.js";
+import { getListPos } from "../handler/pos/getListPos.js";
+import { updateUserPos } from "../handler/pos/updateUserPos.js";
 import express from "express";
 
 const router = express.Router();

@@ -48,7 +48,7 @@ export const createGameSession = async (req, res) => {
 
       const [game_session] = await db.execute(
         "INSERT INTO game_session (`pos_game_id`, `tim1_id`, `tim2_id`, `start_time`, `score1`, `score2`) VALUES (?, ?, ?, NOW(), 0, 0)",
-        [pos_id[0].id, tim1, tim2]
+        [pos[0].id, tim1, tim2]
       );
 
       if (game_session.length === 0) {
@@ -63,7 +63,7 @@ export const createGameSession = async (req, res) => {
         message: "Berhasil membuat game session!",
         data: {
           id: gameSessionId,
-          pos_id: pos_id[0].id,
+          pos_id: pos[0].id,
           id_tim1: tim1,
           id_tim2: tim2,
         },

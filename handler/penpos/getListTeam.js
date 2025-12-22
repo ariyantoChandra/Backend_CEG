@@ -28,26 +28,22 @@ export const getListTeam = async (req, res) => {
       });
     }
 
-    const [rows] = await db.execute(
+    const [list_tim] = await db.execute(
       "SELECT u.id, u.nama_tim, p.penpos_id, p.name_pos FROM user u INNER JOIN pos_game p ON u.current_pos = p.id WHERE u.current_pos = ?",
       [current_pos]
     );
 
-    if (rows.length === 0) {
+    if (list_tim.length === 0) {
       return res.status(404).json({
         success: false,
         message: "Tidak ada tim yang bermain!",
       });
     }
 
-    const list_tim = rows;
-
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan tim!",
-      data: {
-        tim: list_tim,
-      },
+      data: list_tim,
     });
   } catch (error) {
     console.error("ERROR GET LIST TIM:", error);

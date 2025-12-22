@@ -1,5 +1,4 @@
 import express from "express";
-import http from "http";
 import cors from "cors";
 
 import authRoutes from "./routes/authRoutes.js";
@@ -7,9 +6,6 @@ import chemicalBattleRoutes from "./routes/chemicalBattleRoutes.js";
 import penposRoutes from "./routes/penposRoutes.js";
 import gameSessionRoutes from "./routes/gameSessionRoutes.js";
 import posRoutes from "./routes/posRoutes.js";
-
-import { initServer } from "./config/initSocketServer.js";
-import db from "./config/database.js";
 
 const app = express();
 const PORT = 5000;
@@ -29,11 +25,8 @@ app.use("/chemical-battle", chemicalBattleRoutes);
 app.use("/penpos", penposRoutes);
 app.use("/game-session", gameSessionRoutes);
 app.use("/pos", posRoutes);
+app.use("")
 
-const server = http.createServer(app);
-
-initServer(server, db);
-
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

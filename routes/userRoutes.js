@@ -3,6 +3,7 @@ import { updateUserPos } from "../handler/user/updateUserPos.js";
 import { getSelectedCard } from "../handler/user/getSelectedCard.js";
 import { getReadyCard } from "../handler/user/getReadyCard.js";
 import { getCard } from "../handler/user/getCard.js";
+import { checkAcc } from "../handler/user/checkAcc.js";
 import express from "express";
 
 const router = express.Router();
@@ -16,5 +17,7 @@ router.post("/abn/get-card", getCard);
 router.post("/abn/get-ready-card", getReadyCard);    
 
 router.post("/abn/get-selected-card", getSelectedCard);
+
+router.post("/check-acc", checkAcc);
 
 export default router;

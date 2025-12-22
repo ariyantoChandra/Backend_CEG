@@ -26,7 +26,7 @@ app.use("/chemical-battle", chemicalBattleRoutes);
 app.use("/penpos", penposRoutes);
 app.use("/game-session", gameSessionRoutes);
 app.use("/pos", posRoutes);
-// app.use("/user", userRoutes);
+app.use("/user", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

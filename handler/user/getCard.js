@@ -44,7 +44,7 @@ export const getCard = async (req, res) => {
     const { tim1_id, tim2_id } = findGameSession[0];
 
     const [cards] = await db.execute(
-      "SELECT asam_kuat, asam_lemah, netral, basa_kuat, asam_lemah FROM card WHERE user_id IN (?, ?)",
+      "SELECT asam_kuat, asam_lemah, netral, basa_kuat, basa_lemah FROM card WHERE user_id IN (?, ?)",
       [tim1_id, tim2_id]
     );
 

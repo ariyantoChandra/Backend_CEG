@@ -26,6 +26,27 @@ export const checkAcc = async (req, res) => {
         message: "ID pengguna tidak ditemukan.",
       });
     }
+
+    const pos_id = req.body.pos_id;
+
+    const [game_session] = await db.execute(
+      "SELECT id FROM game_session WHERE pos_game_id = ? AND end_time IS NULL",
+      [pos_id]
+    );
+
+    if (game_session.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "Game belum dimulai!",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Game dimulai!",
+      data: game_session[0].id,
+    });
+
   } catch (error) {
     console.error("ERROR CHECK ACC:", error);
     return res.status(500).json({

@@ -41,7 +41,7 @@ export const getListPos = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan list pos!",
-      data: list_pos,
+      data: list_pos, 
     });
   } catch (error) {
     console.error("ERROR GET LIST POS:", error);

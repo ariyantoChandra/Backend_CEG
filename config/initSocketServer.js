@@ -1,6 +1,6 @@
 import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
-import { checkBattleResult } from "../handler/chemicalPlantBattle/checkCard";
+import { checkBattleResult } from "../handler/chemicalPlantBattle/checkCard.js";
 import dotenv from "dotenv";
 dotenv.config();
 

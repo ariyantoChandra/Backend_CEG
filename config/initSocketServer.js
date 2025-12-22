@@ -115,7 +115,7 @@ export const initServer = (server, db) => {
 
       const result = checkBattleResult(cardTim1, cardTim2);
 
-      if (resutl === "menang") {
+      if (result === "menang") {
       }
 
       socket.to(`game_session_${game_session_id}`).emit("enemy-selected", {

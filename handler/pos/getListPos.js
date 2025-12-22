@@ -27,23 +27,21 @@ export const getListPos = async (req, res) => {
       });
     }
 
-    const [rows] = await db.execute("SELECT * FROM pos_game")
+    const [list_pos] = await db.execute(
+      "SELECT * FROM pos_game ORDER BY status"
+    );
 
-    if (rows.length === 0) {
+    if (list_pos.length === 0) {
       return res.status(404).json({
         success: false,
         message: "Gagal mendapatkan list pos!",
       });
     }
 
-    const list_pos = rows;
-
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan list pos!",
-      data: {
-        list_pos,
-      },
+      data: list_pos,
     });
   } catch (error) {
     console.error("ERROR GET LIST POS:", error);

@@ -1,5 +1,3 @@
-// BACKEND/handler/auth/login.js
-
 import db from "../../config/database.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";

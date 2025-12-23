@@ -2,8 +2,8 @@ import db from "../../config/database.js";
 
 export const verifyPayment = async (req, res) => {
   try {
-    const { timId } = req.params;
-    const { status_pembayaran } = req.body; // 'verified' atau 'unverified'
+    const { timId } = req.query;
+    const { status_pembayaran } = req.body;
 
     await db.execute(
       "UPDATE tim SET status_pembayaran = ? WHERE id = ?",

@@ -9,7 +9,7 @@ import penposRoutes from "./routes/penposRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
 // Routes Admin
-import adminRoutes from "./admin/adminRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
 
 const app = express();
 const PORT = 5000;

@@ -2,7 +2,7 @@ import db from "../../config/database.js";
 
 export const manageNotes = async (req, res) => {
   try {
-    const { timId } = req.params;
+    const { timId } = req.query;
     const { notes } = req.body;
 
     await db.execute(

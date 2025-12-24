@@ -41,9 +41,7 @@ export const getPos = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan posisi penpos!",
-      data: {
-        pos: pos,
-      },
+      data: pos,
     });
   } catch (error) {
     console.error("ERROR GET POS:", error);

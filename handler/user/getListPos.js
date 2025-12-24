@@ -28,7 +28,7 @@ export const getListPos = async (req, res) => {
     }
 
     const [list_pos] = await db.execute(
-      "SELECT * FROM pos_game ORDER BY status"
+      "SELECT * FROM pos_game ORDER BY status DESC"
     );
 
     if (list_pos.length === 0) {
@@ -41,7 +41,7 @@ export const getListPos = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan list pos!",
-      data: list_pos, 
+      data: list_pos,
     });
   } catch (error) {
     console.error("ERROR GET LIST POS:", error);

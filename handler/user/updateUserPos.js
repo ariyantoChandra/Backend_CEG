@@ -28,10 +28,10 @@ export const updateUserPos = async (req, res) => {
       });
     }
 
-    await db.execute("UPDATE user SET current_pos = ?, status = 'MENUNGGU' WHERE id = ?", [
-      current_pos,
-      userId,
-    ]);
+    await db.execute(
+      "UPDATE tim SET pos_game_id = ?, status = 'MENUNGGU' WHERE id = ?",
+      [current_pos, userId]
+    );
 
     return res.status(200).json({
       success: true,

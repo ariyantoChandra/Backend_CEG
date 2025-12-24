@@ -27,13 +27,13 @@ export const exitWaitingRoom = async (req, res) => {
       });
     }
     await db.execute(
-      "UPDATE user SET current_pos = NULL, status = 'KOSONG' WHERE id = ?",
+      "UPDATE tim SET pos_game_id = NULL, status = 'KOSONG' WHERE id = ?",
       [userId]
     );
-     return res.status(200).json({
-       success: true,
-       message: "Berhasil keluar dari ruang tunggu!",
-     });
+    return res.status(200).json({
+      success: true,
+      message: "Berhasil keluar dari ruang tunggu!",
+    });
   } catch (error) {
     console.error("ERROR EXIT WAITING ROOM:", error);
     return res.status(500).json({

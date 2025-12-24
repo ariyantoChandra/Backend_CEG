@@ -28,7 +28,7 @@ export const getUserInfo = async (req, res) => {
     }
 
     const [info] = await db.execute(
-      "SELECT nama_tim, total_points as points, total_coin as coins FROM user WHERE id = ?",
+      "SELECT u.nama_tim, t.total_points as points, t.total_coin as coins FROM user u INNER JOIN tim t ON u.id = t.user_id WHERE u.id = ?",
       [userId]
     );
 

@@ -1,5 +1,5 @@
-import db from "../../config/database.js";
-import { checkToken } from "../../config/checkToken.js";
+import db from "../../../config/database.js";
+import { checkToken } from "../../../config/checkToken.js";
 
 export const exitWaitingRoom = async (req, res) => {
   try {

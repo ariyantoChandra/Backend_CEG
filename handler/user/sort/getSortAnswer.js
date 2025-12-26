@@ -1,7 +1,7 @@
 import db from "../../../config/database.js";
 import { checkToken } from "../../../config/checkToken.js";
 
-export const getListPos = async (req, res) => {
+export const getSortAnswer = async (req, res) => {
   try {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -26,25 +26,8 @@ export const getListPos = async (req, res) => {
         message: "ID pengguna tidak ditemukan.",
       });
     }
-
-    const [list_pos] = await db.execute(
-      "SELECT * FROM pos_game ORDER BY status DESC"
-    );
-
-    if (list_pos.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "Gagal mendapatkan list pos!",
-      });
-    }
-
-    return res.status(200).json({
-      success: true,
-      message: "Berhasil mendapatkan list pos!",
-      data: list_pos,
-    });
   } catch (error) {
-    console.error("ERROR GET LIST POS:", error);
+    console.error("ERROR GET SORT ANSWER:", error);
     return res.status(500).json({
       success: false,
       message: "Terjadi kesalahan server: " + error.message,

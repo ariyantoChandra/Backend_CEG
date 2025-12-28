@@ -30,7 +30,7 @@ export const getListTeam = async (req, res) => {
     const current_pos = req.query.currentPos;
 
     const [list_tim] = await db.execute(
-      "SELECT u.id, u.nama_tim, t.pos_game_id FROM tim t INNER JOIN user u WHERE t.pos_game_id = ?",
+      "SELECT u.id, u.nama_tim, t.pos_game_id, status FROM tim t INNER JOIN user u WHERE t.pos_game_id = ? ORDER BY status DESC",
       [current_pos]
     );
 

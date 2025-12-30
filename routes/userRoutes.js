@@ -1,3 +1,8 @@
+import express from "express";
+// Import Handler Auth
+import { register } from "../handler/auth/register.js";
+
+// Import Handler User/Game
 import { getListPos } from "../handler/user/pos/getListPos.js";
 import { updateUserPos } from "../handler/user/pos/updateUserPos.js";
 import { getSelectedCard } from "../handler/user/abn/getSelectedCard.js";
@@ -16,11 +21,12 @@ import { getCPTools } from "../handler/user/cpbattle/getCPTools.js";
 import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
 import { getCPAnswer } from "../handler/user/cpbattle/getCPAnswer.js";
 
-import express from "express";
-import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
-
 const router = express.Router();
 
+// --- ROUTE REGISTER ---
+router.post("/auth/register", register);
+
+// --- ROUTES GAME LAINNYA ---
 router.get("/get-list-pos", getListPos);
 router.put("/update-user-pos", updateUserPos);
 router.post("/abn/get-card", getCard);
@@ -39,4 +45,5 @@ router.post("/cpbattle/get-cp-tools", getCPTools);
 router.post("/cpbattle/get-cp-question", getCPQuestion);
 router.post("/cpbattle/get-cp-answer", getCPAnswer);
 
+// BARIS DI BAWAH INI WAJIB ADA AGAR INDEX.JS TIDAK ERROR:
 export default router;

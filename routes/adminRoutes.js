@@ -1,13 +1,14 @@
 import express from "express";
 import { verifyPayment } from "../handler/admin/verifyPayment.js";
-import { manageNotes } from "../handler/admin/manageNotes.js";
+import { getAllTeams } from "../handler/admin/getDashboardData.js"; 
+import { getTeamDetail } from "../handler/admin/getTeamDetail.js";
+import { upload } from "../middleware/uploadImage.js";
 
 const router = express.Router();
 
-// Verifikasi pembayaran tim
-router.put("/verify-payment", verifyPayment);
+router.get("/get-all-teams", getAllTeams);
+// ====================================================
 
-// Tambah / update catatan tim
-router.put("/manage-notes", manageNotes);
-
+router.get("/get-team-detail/:teamId", getTeamDetail);
+router.put("/verify-payment/:teamId", upload.any(), verifyPayment);
 export default router;

@@ -1,145 +1,123 @@
-// BACKEND/handler/auth/register.js
-
 import db from "../../config/database.js";
-// import bcrypt from "bcrypt"; // aktifkan jika ingin hashing password
 
 export const register = async (req, res) => {
+  // Gunakan connection dari pool untuk transaction
+  const connection = await db.getConnection(); 
+
   try {
+    // 1. TANGKAP DATA DARI FORM DATA
+    // Karena pakai Multer, req.body berisi text, req.files berisi file
     const {
-      nama_tim,
-      password,
-      email,
-      asal_sekolah,
-      no_wa,
-      id_line,
-      kategori_biaya,    // ENUM: 'EARLY_BIRD','NORMAL'
-      paket,             // ENUM: 'SINGLE','BUNDLE'
-      bukti_pembayaran,  // VARCHAR(200)
-      status_pembayaran, // ENUM: 'verified','unverified'
-      members,           // Array berisi 3 anggota
+      nama_tim, password, email, asal_sekolah, no_wa, id_line,
+      kategori_biaya, paket, members: membersString
     } = req.body;
 
-    // Validasi input dasar
+    // 2. PARSING DATA MEMBER (PENTING!)
+    // FormData mengirim array sebagai String JSON, jadi harus kita parse balik
+    let members = [];
+    try {
+        members = JSON.parse(membersString);
+    } catch (e) {
+        members = []; 
+    }
+
+    // 3. FUNGSI BANTU CARI NAMA FILE
+    // Multer menyimpan info file di req.files. Kita cari berdasarkan nama field-nya.
+    const getFilename = (fieldname) => {
+        // Cek apakah req.files ada isinya
+        if (!req.files || req.files.length === 0) return null;
+        
+        const found = req.files.find(f => f.fieldname === fieldname);
+        return found ? found.filename : null;
+    };
+
+    // Ambil bukti pembayaran
+    const buktiPembayaranFile = getFilename('bukti_pembayaran');
+
+    // 4. VALIDASI INPUT
     if (!nama_tim || !password || !asal_sekolah) {
-      return res.status(400).json({
-        success: false,
-        message: "Nama tim, password, dan asal sekolah wajib diisi.",
-      });
+        return res.status(400).json({ success: false, message: "Data wajib diisi (Nama Tim, Password, Asal Sekolah)" });
     }
 
-    if (!Array.isArray(members) || members.length !== 3) {
-      return res.status(400).json({
-        success: false,
-        message: "Jumlah anggota tim wajib 3 orang.",
-      });
-    }
+    // MULAI TRANSAKSI DATABASE
+    await connection.beginTransaction();
 
-    // Cek duplikasi nama tim
-    const [existingUser] = await db.execute(
-      "SELECT id FROM user WHERE nama_tim = ?",
+    // 5. CEK DUPLIKASI NAMA TIM
+    const [existingUser] = await connection.execute(
+      "SELECT id FROM `user` WHERE nama_tim = ?",
       [nama_tim]
     );
 
     if (existingUser.length > 0) {
-      return res.status(409).json({
-        success: false,
-        message: "Nama tim sudah terdaftar.",
-      });
+      await connection.rollback();
+      return res.status(409).json({ success: false, message: "Nama tim sudah terdaftar." });
     }
 
-    // Insert ke tabel user
-    const [insertUser] = await db.execute(
-      `INSERT INTO user (nama_tim, password, role)
-       VALUES (?, ?, 'PESERTA')`,
-      [nama_tim, password] // gunakan hashedPassword jika bcrypt aktif
+    // 6. INSERT KE TABEL USER
+    const [insertUser] = await connection.execute(
+        "INSERT INTO `user` (nama_tim, password, role, status, total_points, total_coin) VALUES (?, ?, 'PESERTA', 'KOSONG', 0, 0)",
+        [nama_tim, password]
     );
-
     const newUserId = insertUser.insertId;
 
-    // Insert ke tabel tim
-    const timParams = [
-      newUserId,
-      email ?? null,
-      asal_sekolah,
-      no_wa ?? null,
-      id_line ?? null,
-      kategori_biaya,
-      paket,
-      bukti_pembayaran ?? null,
-      status_pembayaran ?? null,
-    ];
-
-    console.log("TIM PARAMS:", timParams);
-
-    await db.execute(
+    // 7. INSERT KE TABEL TIM
+    await connection.execute(
       `INSERT INTO tim (
-        user_id,
-        pos_game_id,
-        total_points,
-        total_coin,
-        status,
-        email,
-        asal_sekolah,
-        no_wa,
-        id_line,
-        kategori_biaya,
-        paket,
-        bukti_pembayaran,
-        status_pembayaran,
-        notes
-      ) VALUES (?, NULL, 0, 0, 'KOSONG', ?, ?, ?, ?, ?, ?, ?, ?, '')`,
-      timParams
+        id, nama_tim, email, asal_sekolah, no_wa, id_line,
+        kategori_biaya, paket, bukti_pembayaran, status_pembayaran, notes
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'unverified', '')`,
+      [
+        newUserId, 
+        nama_tim, 
+        email ?? null, 
+        asal_sekolah, 
+        no_wa ?? null, 
+        id_line ?? null,
+        kategori_biaya, 
+        paket, 
+        buktiPembayaranFile // <--- ISI DENGAN NAMA FILE DARI MULTER
+      ]
     );
 
-    // Insert anggota ke tabel member
-    const memberPromises = members.map((member) => {
-      const memberParams = [
-        newUserId,
-        member.nama_anggota,
-        member.pas_foto ?? null,
-        member.kartu_pelajar ?? null,
-        member.bukti_follow_ceg ?? null,
-        member.bukti_follow_tkubaya ?? null,
-        member.alergi ?? null,
-        member.penyakit_bawaan ?? null,
-        member.pola_makan, // ENUM: 'NORMAL','VEGETARIAN','VEGAN'
-      ];
+    // 8. INSERT KE TABEL MEMBER
+    for (let i = 0; i < members.length; i++) {
+      const member = members[i];
+      
+      // Cari nama file untuk setiap member berdasarkan index (0, 1, 2)
+      // Nama field ini harus SAMA PERSIS dengan yang dikirim dari Frontend (FormData)
+      const pasFoto = getFilename(`member_${i}_pas_foto`);
+      const kartuPelajar = getFilename(`member_${i}_kartu_pelajar`);
+      const followCeg = getFilename(`member_${i}_follow_ceg`); // Sesuaikan nama field frontend
+      const followTk = getFilename(`member_${i}_follow_tk`);   // Sesuaikan nama field frontend
 
-      console.log("MEMBER PARAMS:", memberParams);
-
-      return db.execute(
+      await connection.execute(
         `INSERT INTO member (
-          tim_user_id,
-          nama_anggota,
-          pas_foto,
-          kartu_pelajar,
-          bukti_follow_ceg,
-          bukti_follow_tkubaya,
-          alergi,
-          penyakit_bawaan,
-          pola_makan
+          tim_id, nama_anggota, pola_makan, alergi, penyakit_bawaan,
+          pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tkubaya
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        memberParams
+        [
+          newUserId, 
+          member.nama_anggota, 
+          member.pola_makan, 
+          member.alergi || '-', 
+          member.penyakit_bawaan || '-',
+          pasFoto,      // Simpan nama file
+          kartuPelajar, // Simpan nama file
+          followCeg,    // Simpan nama file
+          followTk      // Simpan nama file
+        ]
       );
-    });
+    }
 
-    await Promise.all(memberPromises);
+    // SELESAI
+    await connection.commit();
+    return res.status(201).json({ success: true, message: "Pendaftaran Berhasil" });
 
-    // Response sukses
-    return res.status(201).json({
-      success: true,
-      message: "Selamat, pendaftaran tim berhasil.",
-      data: {
-        id_user: newUserId,
-        nama_tim,
-        jumlah_anggota: members.length,
-      },
-    });
   } catch (error) {
-    console.error("ERROR REGISTER:", error);
-    return res.status(500).json({
-      success: false,
-      message: "Terjadi kesalahan server: " + error.message,
-    });
+    await connection.rollback();
+    console.error("REGISTER ERROR:", error);
+    return res.status(500).json({ success: false, message: "Server Error: " + error.message });
+  } finally {
+    connection.release();
   }
 };

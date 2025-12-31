@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Routes Web Pendaftaran
 import authRoutes from "./routes/authRoutes.js";

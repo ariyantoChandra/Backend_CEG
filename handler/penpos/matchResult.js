@@ -36,15 +36,12 @@ export const matchResult = async (req, res) => {
       });
     }
 
-    await db.beginTransaction();
-
     const [checkStatus] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND penpos_id = ? AND end_time IS NULL",
       [game_session_id, userId]
     );
 
     if (checkStatus.length === 0) {
-      await db.rollback();
       return res.status(404).json({
         success: false,
         message: "Game session not found or already ended.",
@@ -54,7 +51,6 @@ export const matchResult = async (req, res) => {
     if (checkStatus[0].tipe === "BATTLE") {
       const { tim_menang, tim_kalah } = req.body;
       if (!tim_menang || !tim_kalah) {
-        await db.rollback();
         return res.status(400).json({
           success: false,
           message: "tim_menang dan tim_kalah wajib dikirim",
@@ -67,7 +63,6 @@ export const matchResult = async (req, res) => {
         ) ||
         ![checkStatus[0].tim_id1, checkStatus[0].tim_id2].includes(tim_kalah)
       ) {
-        await db.rollback();
         return res.status(400).json({
           success: false,
           message: "Tim tidak valid untuk pertandingan ini",
@@ -89,8 +84,6 @@ export const matchResult = async (req, res) => {
           "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
           [checkStatus[0].tim_id2]
         );
-
-        await db.commit();
 
         return res.status(200).json({
           success: true,
@@ -116,8 +109,6 @@ export const matchResult = async (req, res) => {
           [checkStatus[0].tim_id1]
         );
 
-        await db.commit();
-
         return res.status(200).json({
           success: true,
           message: `Tim yang menang mendapatkan 5 poin & tim yang kalah mendapatkan 1 poin!`,
@@ -127,7 +118,6 @@ export const matchResult = async (req, res) => {
           },
         });
       } else {
-        await db.rollback();
         return res.status(400).json({
           success: false,
           message: "Tim tidak sesuai dengan tim yang bertanding",
@@ -137,7 +127,6 @@ export const matchResult = async (req, res) => {
       const { result, tim_id } = req.body;
 
       if (typeof result !== "boolean" || !tim_id) {
-        await db.rollback();
         return res.status(400).json({
           success: false,
           message: "result dan tim_id wajib dikirim",
@@ -145,7 +134,6 @@ export const matchResult = async (req, res) => {
       }
 
       if (checkStatus[0].tim_id1 !== tim_id) {
-        await db.rollback();
         return res.status(403).json({
           success: false,
           message: "Tim tidak valid untuk game ini",
@@ -162,7 +150,6 @@ export const matchResult = async (req, res) => {
           [tim_id]
         );
 
-        await db.commit();
         res.status(200).json({
           success: true,
           message: "Mendapatkan 5 poin!",
@@ -176,21 +163,19 @@ export const matchResult = async (req, res) => {
           "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
           [tim_id]
         );
-        await db.commit();
+
         res.status(200).json({
           success: true,
           message: "Mendapatkan 1 poin!",
         });
       }
     } else {
-      await db.rollback();
       return res.status(400).json({
         success: false,
         message: " Tipe pertandingan tidak valid.",
       });
     }
   } catch (error) {
-    await db.rollback();
     console.error("ERROR MATCH RESULT:", error);
     return res.status(500).json({
       success: false,

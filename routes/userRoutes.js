@@ -20,6 +20,7 @@ import { getQuestion } from "../handler/user/question/getQuestion.js";
 import { getCPTools } from "../handler/user/cpbattle/getCPTools.js";
 import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
 import { getCPAnswer } from "../handler/user/cpbattle/getCPAnswer.js";
+import { checkReadyCard } from "../handler/user/abn/checkReady.js";
 
 const router = express.Router();
 
@@ -32,6 +33,7 @@ router.put("/update-user-pos", updateUserPos);
 router.post("/abn/get-card", getCard);
 router.post("/abn/get-ready-card", getReadyCard);
 router.post("/abn/get-selected-card", getSelectedCard);
+router.post("/abn/check-ready-card", checkReadyCard);
 router.get("/check-acc", checkAcc);
 router.get("/exit-waiting-room", exitWaitingRoom);
 router.get("/get-user-info", getUserInfo);

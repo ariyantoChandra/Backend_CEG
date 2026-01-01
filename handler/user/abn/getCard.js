@@ -60,7 +60,7 @@ export const getCard = async (req, res) => {
     if (tim_id1 === userId) {
       return res.status(200).json({
         success: true,
-        message: "Berhasil mendapatkan kartu awal!",
+        message: "Berhasil mendapatkan kartu awal tim 1!",
         data: {
           tim1: tim_id1,
           card_tim1: cards1,
@@ -71,7 +71,7 @@ export const getCard = async (req, res) => {
     } else if (tim_id2 === userId) {
       return res.status(200).json({
         success: true,
-        message: "Berhasil mendapatkan kartu awal!",
+        message: "Berhasil mendapatkan kartu awal tim 2!",
         data: {
           tim1: tim_id2,
           card_tim1: cards2,

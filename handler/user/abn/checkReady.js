@@ -1,7 +1,7 @@
 import db from "../../../config/database.js";
 import { checkToken } from "../../../config/checkToken.js";
 
-export const getReadyCard = async (req, res) => {
+export const checkReadyCard = async (req, res) => {
   try {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -27,7 +27,7 @@ export const getReadyCard = async (req, res) => {
       });
     }
 
-    const { game_session_id, card } = req.body;
+    const { game_session_id } = req.body;
 
     const [session] = await db.execute(
       "SELECT tim_id1, tim_id2 FROM game_session WHERE id = ?",
@@ -40,16 +40,6 @@ export const getReadyCard = async (req, res) => {
         message: "Game session tidak ditemukan!",
       });
     }
-
-    await db.execute(
-      `UPDATE card SET ${card} = ${card} - 1 where tim_user_id = ?`,
-      [userId]
-    );
-
-    await db.execute(`UPDATE user SET selected_card = ? where id = ?`, [
-      card,
-      userId,
-    ]);
 
     const [cards] = await db.execute(
       "SELECT selected_card FROM user WHERE id IN (?, ?)",

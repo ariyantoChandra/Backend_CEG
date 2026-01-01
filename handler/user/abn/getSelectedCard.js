@@ -50,7 +50,12 @@ export const getSelectedCard = async (req, res) => {
       return res.status(200).json({
         success: true,
         message: "Berhasil mendapatkan kartu terpilih!",
-        data: result,
+        data: {
+          tim1: tim[0].tim_id1,
+          card_tim1: card1,
+          tim2: tim[0].tim_id2,
+          card_tim2: card2,
+        },
       });
     } else if (userId === tim[0].tim_id2) {
       await db.execute(`UPDATE user SET selected_card = NULL where id = ?`, [
@@ -59,7 +64,12 @@ export const getSelectedCard = async (req, res) => {
       return res.status(200).json({
         success: true,
         message: "Berhasil mendapatkan kartu terpilih!",
-        data: result,
+        data: {
+          tim1: tim[0].tim_id2,
+          card_tim1: card2,
+          tim2: tim[0].tim_id1,
+          card_tim2: card1,
+        },
       });
     }
   } catch (error) {

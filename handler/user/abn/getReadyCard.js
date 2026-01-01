@@ -56,16 +56,29 @@ export const getReadyCard = async (req, res) => {
       [session[0].tim_id1, session[0].tim_id2]
     );
 
-    return res.status(200).json({
-      success: true,
-      message: "Berhasil mendapatkan kartu terpilih!",
-      data: {
-        tim1: session[0].tim_id1,
-        card_tim1: cards[0].selected_card,
-        tim2: session[0].tim_id2,
-        card_tim2: cards[1].selected_card,
-      },
-    });
+    if (tim_id1 === userId) {
+      return res.status(200).json({
+        success: true,
+        message: "Berhasil mendapatkan kartu ready!",
+        data: {
+          tim1: tim_id1,
+          card_tim1: cards[0].selected_card,
+          tim2: tim_id2,
+          card_tim2: cards[1].selected_card,
+        },
+      });
+    } else if (tim_id2 === userId) {
+      return res.status(200).json({
+        success: true,
+        message: "Berhasil mendapatkan kartu ready!",
+        data: {
+          tim1: tim_id2,
+          card_tim1: cards[1].selected_card,
+          tim2: tim_id1,
+          card_tim2: cards[0].selected_card,
+        },
+      });
+    }
   } catch (error) {
     console.error("ERROR GET READY CARD:", error);
     return res.status(500).json({

@@ -57,16 +57,29 @@ export const getCard = async (req, res) => {
     const cards1 = cards[0];
     const cards2 = cards[1];
 
-    return res.status(200).json({
-      success: true,
-      message: "Berhasil mendapatkan kartu awal!",
-      data: {
-        tim1: tim_id1,
-        card_tim1: cards1,
-        tim2: tim_id2,
-        card_tim2: cards2,
-      },
-    });
+    if (tim_id1 === userId) {
+      return res.status(200).json({
+        success: true,
+        message: "Berhasil mendapatkan kartu awal!",
+        data: {
+          tim1: tim_id1,
+          card_tim1: cards1,
+          tim2: tim_id2,
+          card_tim2: cards2,
+        },
+      });
+    } else if (tim_id2 === userId) {
+      return res.status(200).json({
+        success: true,
+        message: "Berhasil mendapatkan kartu awal!",
+        data: {
+          tim1: tim_id2,
+          card_tim1: cards2,
+          tim2: tim_id1,
+          card_tim2: cards1,
+        },
+      });
+    }
   } catch (error) {
     console.error("ERROR GET CARD:", error);
     return res.status(500).json({

@@ -48,3 +48,4 @@ app.use("/api/admin", adminRoutes);
 app.listen(PORT, () => {
   console.log(`Server berjalan di port ${PORT}`);
 });
+

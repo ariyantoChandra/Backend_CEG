@@ -1,6 +1,6 @@
 import db from "../../../config/database.js";
 import { checkToken } from "../../../config/checkToken.js";
-import checkBattleResult from "./getSelectedCard.js";
+import checkBattleResult from "./checkCard.js";
 
 export const getSelectedCard = async (req, res) => {
   try {

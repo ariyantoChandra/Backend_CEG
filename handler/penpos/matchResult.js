@@ -90,6 +90,21 @@ export const matchResult = async (req, res) => {
           [checkStatus[0].tim_id2]
         );
 
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          [checkStatus[0].tim_id1]
+        );
+
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          [checkStatus[0].tim_id2]
+        );
+
+        await db.execute(
+          "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
+          [userId]
+        );
+
         return res.status(200).json({
           success: true,
           message: `Tim yang menang mendapatkan 5 poin & tim yang kalah mendapatkan 1 poin!`,
@@ -112,6 +127,21 @@ export const matchResult = async (req, res) => {
         await db.execute(
           "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
           [checkStatus[0].tim_id1]
+        );
+
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          [checkStatus[0].tim_id1]
+        );
+
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          [checkStatus[0].tim_id2]
+        );
+
+        await db.execute(
+          "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
+          [userId]
         );
 
         return res.status(200).json({
@@ -155,6 +185,16 @@ export const matchResult = async (req, res) => {
           [tim_id]
         );
 
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          [tim_id]
+        );
+
+        await db.execute(
+          "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
+          [userId]
+        );
+
         res.status(200).json({
           success: true,
           message: "Mendapatkan 5 poin!",
@@ -167,6 +207,16 @@ export const matchResult = async (req, res) => {
         await db.execute(
           "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
           [tim_id]
+        );
+
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          [tim_id]
+        );
+
+        await db.execute(
+          "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
+          [userId]
         );
 
         res.status(200).json({

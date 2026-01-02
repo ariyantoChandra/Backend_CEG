@@ -23,7 +23,7 @@ export const getSelectedCard = async (req, res) => {
       });
     }
 
-    let { game_session_id, card1, card2 } = req.body;
+    const { game_session_id, card1, card2 } = req.body;
 
     const [session] = await db.execute(
       "SELECT tim_id1, tim_id2 FROM game_session WHERE id = ?",
@@ -46,31 +46,14 @@ export const getSelectedCard = async (req, res) => {
       });
     }
 
-    if (tim_id1 === userId) {
-      card1 = card1;
-      card2 = card2;
-    } else if (tim_id2 === userId) {
-      let tempcard = card1;
-      card1 = card2;
-      card2 = tempcard;
-    }
-
-    const cardTim1 = card1;
-    const cardTim2 = card2;
-
-    if (!cardTim1 || !cardTim2) {
+    if (!card1 || !card2) {
       return res.status(400).json({
         success: false,
         message: "Kedua tim harus memilih kartu!",
       });
     }
 
-    const battleResult = checkBattleResult(
-      tim_id1,
-      cardTim1,
-      tim_id2,
-      cardTim2
-    );
+    const battleResult = checkBattleResult(tim_id1, card1, tim_id2, card2);
 
     await db.execute("UPDATE user SET selected_card = NULL WHERE id = ?", [
       userId,
@@ -82,10 +65,10 @@ export const getSelectedCard = async (req, res) => {
         message: "Hasil battle berhasil dihitung!",
         data: {
           tim1: tim_id1,
-          card_tim1: cardTim1,
+          card_tim1: card1,
           result1: battleResult.result1,
           tim2: tim_id2,
-          card_tim2: cardTim2,
+          card_tim2: card2,
           result2: battleResult.result2,
         },
       });
@@ -97,10 +80,10 @@ export const getSelectedCard = async (req, res) => {
         message: "Hasil battle berhasil dihitung!",
         data: {
           tim1: tim_id2,
-          card_tim1: cardTim2,
+          card_tim1: card2,
           result1: battleResult.result2,
           tim2: tim_id1,
-          card_tim2: cardTim1,
+          card_tim2: card1,
           result2: battleResult.result1,
         },
       });

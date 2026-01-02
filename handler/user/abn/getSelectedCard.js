@@ -23,7 +23,7 @@ export const getSelectedCard = async (req, res) => {
       });
     }
 
-    const { game_session_id } = req.body;
+    let { game_session_id, card1, card2 } = req.body;
 
     const [session] = await db.execute(
       "SELECT tim_id1, tim_id2 FROM game_session WHERE id = ?",
@@ -46,23 +46,17 @@ export const getSelectedCard = async (req, res) => {
       });
     }
 
-    const [cards] = await db.execute(
-      `SELECT id, selected_card 
-       FROM user 
-       WHERE id IN (?, ?) 
-       ORDER BY FIELD(id, ?, ?)`,
-      [tim_id1, tim_id2, tim_id1, tim_id2]
-    );
-
-    if (!cards || cards.length < 2) {
-      return res.status(400).json({
-        success: false,
-        message: "Salah satu tim belum memilih kartu!",
-      });
+    if (tim_id1 === userId) {
+      card1 = card1;
+      card2 = card2;
+    } else if (tim_id2 === userId) {
+      let tempcard = card1;
+      card1 = card2;
+      card2 = tempcard;
     }
 
-    const cardTim1 = cards[0].selected_card;
-    const cardTim2 = cards[1].selected_card;
+    const cardTim1 = card1;
+    const cardTim2 = card2;
 
     if (!cardTim1 || !cardTim2) {
       return res.status(400).json({
@@ -89,25 +83,32 @@ export const getSelectedCard = async (req, res) => {
         data: {
           tim1: tim_id1,
           card_tim1: cardTim1,
-          result_tim1: battleResult.result1,
+          result1: battleResult.result1,
           tim2: tim_id2,
           card_tim2: cardTim2,
-          result_tim2: battleResult.result2,
+          result2: battleResult.result2,
         },
       });
     }
 
-    return res.status(200).json({
-      success: true,
-      message: "Hasil battle berhasil dihitung!",
-      data: {
-        tim1: tim_id2,
-        card_tim1: cardTim2,
-        result_tim1: battleResult.result2,
-        tim2: tim_id1,
-        card_tim2: cardTim1,
-        result_tim2: battleResult.result1,
-      },
+    if (userId === tim_id2) {
+      return res.status(200).json({
+        success: true,
+        message: "Hasil battle berhasil dihitung!",
+        data: {
+          tim1: tim_id2,
+          card_tim1: cardTim2,
+          result1: battleResult.result2,
+          tim2: tim_id1,
+          card_tim2: cardTim1,
+          result2: battleResult.result1,
+        },
+      });
+    }
+
+    return res.status(403).json({
+      success: false,
+      message: "User bukan bagian dari game session!",
     });
   } catch (error) {
     console.error("ERROR GET SELECTED CARD:", error);

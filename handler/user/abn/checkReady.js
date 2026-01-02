@@ -42,8 +42,13 @@ export const checkReadyCard = async (req, res) => {
     }
 
     const [cards] = await db.execute(
-      "SELECT selected_card FROM user WHERE id IN (?, ?)",
-      [session[0].tim_id1, session[0].tim_id2]
+      `SELECT id, selected_card FROM user WHERE id IN (?, ?) ORDER BY FIELD(id, ?, ?)`,
+      [
+        session[0].tim_id1,
+        session[0].tim_id2,
+        session[0].tim_id1,
+        session[0].tim_id2,
+      ]
     );
 
     if (session[0].tim_id1 === userId) {

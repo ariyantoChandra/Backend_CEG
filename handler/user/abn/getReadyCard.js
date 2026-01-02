@@ -29,10 +29,32 @@ export const getReadyCard = async (req, res) => {
 
     const { game_session_id, card } = req.body;
 
+    const allowedCards = [
+      "asam_kuat",
+      "asam_lemah",
+      "netral",
+      "basa_kuat",
+      "basa_lemah",
+    ];
+
+    if (!allowedCards.includes(card)) {
+      return res.status(400).json({
+        success: false,
+        message: "Jenis kartu tidak valid!",
+      });
+    }
+
     const [session] = await db.execute(
       "SELECT tim_id1, tim_id2 FROM game_session WHERE id = ?",
       [game_session_id]
     );
+
+    if (![session[0].tim_id1, session[0].tim_id2].includes(userId)) {
+      return res.status(403).json({
+        success: false,
+        message: "User bukan bagian dari game session!",
+      });
+    }
 
     if (session.length === 0) {
       return res.status(404).json({
@@ -42,7 +64,7 @@ export const getReadyCard = async (req, res) => {
     }
 
     await db.execute(
-      `UPDATE card SET ${card} = ${card} - 1 where tim_user_id = ?`,
+      `UPDATE card SET ${card} = ${card} - 1 WHERE tim_user_id = ? AND ${card} > 0`,
       [userId]
     );
 
@@ -52,8 +74,13 @@ export const getReadyCard = async (req, res) => {
     ]);
 
     const [cards] = await db.execute(
-      "SELECT selected_card FROM user WHERE id IN (?, ?)",
-      [session[0].tim_id1, session[0].tim_id2]
+      `SELECT id, selected_card FROM user WHERE id IN (?, ?) ORDER BY FIELD(id, ?, ?)`,
+      [
+        session[0].tim_id1,
+        session[0].tim_id2,
+        session[0].tim_id1,
+        session[0].tim_id2,
+      ]
     );
 
     if (session[0].tim_id1 === userId) {

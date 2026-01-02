@@ -46,25 +46,25 @@ export const checkReadyCard = async (req, res) => {
       [session[0].tim_id1, session[0].tim_id2]
     );
 
-    if (tim_id1 === userId) {
+    if (session[0].tim_id1 === userId) {
       return res.status(200).json({
         success: true,
         message: "Berhasil check kartu ready!",
         data: {
-          tim1: tim_id1,
+          tim1: session[0].tim_id1,
           card_tim1: cards[0].selected_card,
-          tim2: tim_id2,
+          tim2: session[0].tim_id2,
           card_tim2: cards[1].selected_card,
         },
       });
-    } else if (tim_id2 === userId) {
+    } else if (session[0].tim_id2 === userId) {
       return res.status(200).json({
         success: true,
         message: "Berhasil check kartu ready!",
         data: {
-          tim1: tim_id2,
+          tim1: session[0].tim_id2,
           card_tim1: cards[1].selected_card,
-          tim2: tim_id1,
+          tim2: session[0].tim_id1,
           card_tim2: cards[0].selected_card,
         },
       });

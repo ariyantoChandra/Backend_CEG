@@ -41,6 +41,11 @@ export const matchResult = async (req, res) => {
       [game_session_id, userId]
     );
 
+    const [checkTipe] = await db.execute(
+      "SELECT tipe FROM pos_game WHERE penpos_id = ?",
+      [userId]
+    );
+
     if (checkStatus.length === 0) {
       return res.status(404).json({
         success: false,
@@ -48,7 +53,7 @@ export const matchResult = async (req, res) => {
       });
     }
 
-    if (checkStatus[0].tipe === "BATTLE") {
+    if (checkTipe[0].tipe === "BATTLE") {
       const { tim_menang, tim_kalah } = req.body;
       if (!tim_menang || !tim_kalah) {
         return res.status(400).json({
@@ -123,7 +128,7 @@ export const matchResult = async (req, res) => {
           message: "Tim tidak sesuai dengan tim yang bertanding",
         });
       }
-    } else if (checkStatus[0].tipe === "SINGLE") {
+    } else if (checkTipe[0].tipe === "SINGLE") {
       const { result, tim_id } = req.body;
 
       if (typeof result !== "boolean" || !tim_id) {
@@ -183,4 +188,3 @@ export const matchResult = async (req, res) => {
     });
   }
 };
-//aomdoaskdoaksdo

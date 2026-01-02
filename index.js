@@ -35,7 +35,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server Backend Siap Digunakan",
+    message: "Server Backend Siap Digunakan LULULULULULU",
   });
 });
 
@@ -48,4 +48,3 @@ app.use("/api/admin", adminRoutes);
 app.listen(PORT, () => {
   console.log(`Server berjalan di port ${PORT}`);
 });
-

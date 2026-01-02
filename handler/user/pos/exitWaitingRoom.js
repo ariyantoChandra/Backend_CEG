@@ -32,7 +32,7 @@ export const exitWaitingRoom = async (req, res) => {
     );
     return res.status(200).json({
       success: true,
-      message: "Berhasil keluar dari ruang tunggu!",
+      message: "Berhasil keluar dari ruang tunggu! IZINNNNNNN",
     });
   } catch (error) {
     console.error("ERROR EXIT WAITING ROOM:", error);

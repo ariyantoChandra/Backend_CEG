@@ -35,7 +35,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server Backend Siap Digunakan LULULULULULU",
+    message: "Server Backend Siap Digunakan nota lili",
   });
 });
 

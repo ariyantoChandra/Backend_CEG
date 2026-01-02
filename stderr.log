@@ -1,0 +1,2143 @@
+node:internal/modules/esm/resolve:1204
+    throw error;
+    ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'express' imported from /home/cegubaya/Backend_CEG/index.js
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:347:53)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.19.4
+node:internal/modules/esm/resolve:1204
+    throw error;
+    ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'express' imported from /home/cegubaya/Backend_CEG/index.js
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:347:53)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+file:///home/cegubaya/Backend_CEG/routes/userRoutes.js:20
+import { getCPQuestion } from "../handler/user/cpbattle/getCPQuestion.js";
+         ^^^^^^^^^^^^^
+
+SyntaxError: Identifier 'getCPQuestion' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:431:12)
+    at ModuleLoader.getModuleJobForRequire (node:internal/modules/esm/loader:384:33)
+    at new ModuleJobSync (node:internal/modules/esm/module_job:333:34)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:320:11)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1371:24)
+    at Module._compile (node:internal/modules/cjs/loader:1511:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1572:16)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+
+Node.js v20.19.4
+ERROR REGISTER: TypeError: Cannot destructure property 'nama_tim' of 'req.body' as it is undefined.
+    at register (file:///home/cegubaya/Backend_CEG/handler/auth/register.js:9:7)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR REGISTER: TypeError: Cannot destructure property 'nama_tim' of 'req.body' as it is undefined.
+    at register (file:///home/cegubaya/Backend_CEG/handler/auth/register.js:9:7)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR REGISTER: TypeError: Cannot destructure property 'nama_tim' of 'req.body' as it is undefined.
+    at register (file:///home/cegubaya/Backend_CEG/handler/auth/register.js:9:7)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR REGISTER: TypeError: Cannot destructure property 'nama_tim' of 'req.body' as it is undefined.
+    at register (file:///home/cegubaya/Backend_CEG/handler/auth/register.js:9:7)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR REGISTER: TypeError: Cannot destructure property 'nama_tim' of 'req.body' as it is undefined.
+    at register (file:///home/cegubaya/Backend_CEG/handler/auth/register.js:9:7)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user ''@'localhost' (using password: NO)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost' (using password: NO)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:16:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sql: undefined,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'cegubaya_jagoan'@'localhost' (using password: YES)"
+}
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR LOGIN: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///home/cegubaya/Backend_CEG/handler/auth/login.js:42:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+ERROR GET USER INFO: TypeError: Cannot read properties of null (reading 'id')
+    at getUserInfo (file:///home/cegubaya/Backend_CEG/handler/user/getUserInfo.js:15:28)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR GET USER INFO: TypeError: Cannot read properties of null (reading 'id')
+    at getUserInfo (file:///home/cegubaya/Backend_CEG/handler/user/getUserInfo.js:15:28)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR GET USER INFO: TypeError: Cannot read properties of null (reading 'id')
+    at getUserInfo (file:///home/cegubaya/Backend_CEG/handler/user/getUserInfo.js:15:28)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR GET LIST POS: TypeError: Cannot read properties of null (reading 'id')
+    at getListPos (file:///home/cegubaya/Backend_CEG/handler/user/pos/getListPos.js:15:28)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+ERROR GET USER INFO: Error: Unknown column 't.total_points' in 'SELECT'
+    at PromisePool.execute (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/mysql2/lib/promise/pool.js:54:22)
+    at getUserInfo (file:///home/cegubaya/Backend_CEG/handler/user/getUserInfo.js:30:29)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: 'SELECT u.nama_tim, t.total_points as points, t.total_coin as coins FROM user u INNER JOIN tim t ON u.id = t.user_id WHERE u.id = ?',
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 't.total_points' in 'SELECT'"
+}
+ERROR CHECK ACC: TypeError: Cannot read properties of null (reading 'id')
+    at checkAcc (file:///home/cegubaya/Backend_CEG/handler/user/pos/checkAcc.js:15:28)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)
+TypeError: db.rollback is not a function
+    at matchResult (file:///home/cegubaya/Backend_CEG/handler/penpos/matchResult.js:193:14)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/route.js:117:3)
+    at handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/lib/layer.js:152:17)
+    at /home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:295:15
+    at processParams (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:582:12)
+    at next (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:291:5)
+    at Function.handle (/home/cegubaya/nodevenv/Backend_CEG/20/lib/node_modules/router/index.js:186:3)

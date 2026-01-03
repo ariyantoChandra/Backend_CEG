@@ -23,11 +23,14 @@ export const register = async (req, res) => {
     // 2. PARSING DATA MEMBER (PENTING!)
     // FormData mengirim array sebagai String JSON, jadi harus kita parse balik
     let members = [];
-    try {
-      members = JSON.parse(membersString);
-    } catch (e) {
-      members = [];
+    if (typeof membersString === "string") {
+    // Jika dikirim via FormData
+    members = JSON.parse(membersString);}
+    else if (Array.isArray(membersString)) {
+    // Jika dikirim via raw JSON
+    members = membersString;
     }
+
 
     // 3. FUNGSI BANTU CARI NAMA FILE
     // Multer menyimpan info file di req.files. Kita cari berdasarkan nama field-nya.
@@ -104,7 +107,7 @@ export const register = async (req, res) => {
 
       await connection.execute(
         `INSERT INTO member (
-          tim_id, nama_anggota, pola_makan, alergi, penyakit_bawaan,
+          tim_user_id, nama_anggota, pola_makan, alergi, penyakit_bawaan,
           pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tkubaya
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [

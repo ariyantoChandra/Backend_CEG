@@ -55,10 +55,6 @@ export const getSelectedCard = async (req, res) => {
 
     const battleResult = checkBattleResult(tim_id1, card1, tim_id2, card2);
 
-    await db.execute("UPDATE user SET selected_card = NULL WHERE id = ?", [
-      userId,
-    ]);
-
     if (userId === tim_id1) {
       return res.status(200).json({
         success: true,
@@ -88,11 +84,6 @@ export const getSelectedCard = async (req, res) => {
         },
       });
     }
-
-    return res.status(403).json({
-      success: false,
-      message: "User bukan bagian dari game session!",
-    });
   } catch (error) {
     console.error("ERROR GET SELECTED CARD:", error);
     return res.status(500).json({

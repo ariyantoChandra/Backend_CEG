@@ -48,6 +48,10 @@ export const getCard = async (req, res) => {
       [tim_id1, tim_id2, tim_id1, tim_id2]
     );
 
+    await db.execute("UPDATE user SET selected_card = NULL WHERE id = ?", [
+      userId,
+    ]);
+
     if (cards.length === 0) {
       return res.status(404).json({
         success: false,

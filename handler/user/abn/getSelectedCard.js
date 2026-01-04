@@ -71,14 +71,14 @@ export const getSelectedCard = async (req, res) => {
       });
     }
 
-    const battleResult = checkBattleResult(
-      tim_id1,
-      cardMap[tim_id1],
-      tim_id2,
-      cardMap[tim_id2]
-    );
-
     if (userId === tim_id1) {
+      const battleResult = checkBattleResult(
+        tim_id1,
+        cardMap[tim_id1],
+        tim_id2,
+        cardMap[tim_id2]
+      );
+
       return res.status(200).json({
         success: true,
         message: "Hasil battle berhasil dihitung!",
@@ -94,16 +94,23 @@ export const getSelectedCard = async (req, res) => {
     }
 
     if (userId === tim_id2) {
+      const battleResult = checkBattleResult(
+        tim_id2,
+        cardMap[tim_id2],
+        tim_id1,
+        cardMap[tim_id1]
+      );
+
       return res.status(200).json({
         success: true,
         message: "Hasil battle berhasil dihitung!",
         data: {
           tim1: tim_id2,
           card_tim1: cardMap[tim_id2],
-          result1: battleResult.result2,
+          result1: battleResult.result1,
           tim2: tim_id1,
           card_tim2: cardMap[tim_id1],
-          result2: battleResult.result1,
+          result2: battleResult.result2,
         },
       });
     }

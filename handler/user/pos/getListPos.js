@@ -28,7 +28,7 @@ export const getListPos = async (req, res) => {
     }
 
     const [list_pos] = await db.execute(
-      "SELECT * FROM pos_game ORDER BY status ASC, id ASC"
+      "SELECT * FROM pos_game ORDER BY status ASC, penpos_id ASC"
     );
 
     if (list_pos.length === 0) {

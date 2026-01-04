@@ -3,7 +3,7 @@ import { register } from "../handler/auth/register.js";
 import { checkStatusPendaftaran } from "../handler/user/checkStatusPembayaran.js";
 import express from "express";
 // IMPORT MIDDLEWARE YANG BARU DIBUAT
-// import { upload } from "../middleware/uploadImage.js";
+import { upload } from "../middleware/uploadImage.js";
 
 const router = express.Router();
 

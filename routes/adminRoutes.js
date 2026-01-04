@@ -1,6 +1,6 @@
 import express from "express";
 import { verifyPayment } from "../handler/admin/verifyPayment.js";
-import { getAllTeams } from "../handler/admin/getDashboardData.js";
+import { getAllTeams } from "../handler/admin/getAllTeams.js";
 import { getTeamDetail } from "../handler/admin/getTeamDetail.js";
 import { upload } from "../middleware/uploadImage.js";
 

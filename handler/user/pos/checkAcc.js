@@ -39,10 +39,28 @@ export const checkAcc = async (req, res) => {
       });
     }
 
+    const [pos_name] = await db.execute(
+      "SELECT u.nama_tim FROM user u INNER JOIN game_session g ON u.id = g.penpos_id WHERE g.id = ?",
+      [game_session[0].id]
+    );
+
+    if (pos_name.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "Pos tidak ditemukan!",
+      });
+    }
+
+    const namaTim = rows[0]?.nama_tim;
+    const slugNamaTim = namaTim.toLowerCase().trim().replace(/\s+/g, "-");
+
     return res.status(200).json({
       success: true,
       message: "Game dimulai!",
-      data: game_session[0].id,
+      data: {
+        game_session_id: game_session[0].id,
+        nama_tim: slugNamaTim,
+      },
     });
   } catch (error) {
     console.error("ERROR CHECK ACC:", error);

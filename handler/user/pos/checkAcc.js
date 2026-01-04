@@ -59,7 +59,7 @@ export const checkAcc = async (req, res) => {
       message: "Game dimulai!",
       data: {
         game_session_id: game_session[0].id,
-        nama_tim: slugNamaTim,
+        nama_game: slugNamaTim,
       },
     });
   } catch (error) {

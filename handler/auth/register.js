@@ -1,13 +1,18 @@
 import db from "../../config/database.js";
 
 export const register = async (req, res) => {
-  // Gunakan connection dari pool untuk transaction
+  // Ambil koneksi database dari pool
   const connection = await db.getConnection();
 
-  try {
-    console.log("CEK BODY:", req.body);
-    console.log("CEK FILES:", req.files);
+  // Penanda apakah transaksi sudah dimulai
+  let transactionStarted = false;
 
+  try {
+    // Debug data dari frontend
+    console.log("cek body:", req.body);
+    console.log("cek files:", req.files);
+
+    // Ambil data dari request body
     const {
       nama_tim,
       password,
@@ -20,68 +25,102 @@ export const register = async (req, res) => {
       members: membersString,
     } = req.body;
 
-    // 2. PARSING DATA MEMBER (PENTING!)
-    // FormData mengirim array sebagai String JSON, jadi harus kita parse balik
+    // Parsing data members dari formdata
     let members = [];
-    if (typeof membersString === "string") {
-    // Jika dikirim via FormData
-    members = JSON.parse(membersString);}
-    else if (Array.isArray(membersString)) {
-    // Jika dikirim via raw JSON
-    members = membersString;
-    }
-
-
-    // 3. FUNGSI BANTU CARI NAMA FILE
-    // Multer menyimpan info file di req.files. Kita cari berdasarkan nama field-nya.
-    const getFilename = (fieldname) => {
-      // Cek apakah req.files ada isinya
-      if (!req.files || req.files.length === 0) return null;
-
-      const found = req.files.find((f) => f.fieldname === fieldname);
-      return found ? found.filename : null;
-    };
-
-    // Ambil bukti pembayaran
-    const buktiPembayaranFile = getFilename("bukti_pembayaran");
-
-    // 4. VALIDASI INPUT
-    if (!nama_tim || !password || !asal_sekolah) {
+    try {
+      if (typeof membersString === "string") {
+        members = JSON.parse(membersString);
+      } else if (Array.isArray(membersString)) {
+        members = membersString;
+      }
+    } catch {
       return res.status(400).json({
         success: false,
-        message: "Data wajib diisi (Nama Tim, Password, Asal Sekolah)",
+        message: "format data member tidak valid",
       });
     }
 
-    // MULAI TRANSAKSI DATABASE
-    await connection.beginTransaction();
+    // Pastikan members berbentuk array dan tidak kosong
+    if (!Array.isArray(members) || members.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "minimal harus ada 1 anggota tim",
+      });
+    }
 
-    // 5. CEK DUPLIKASI NAMA TIM
+    // Mapping field ke subfolder (sesuai dengan uploadImage.js)
+    const fieldToFolder = {
+      bukti_pembayaran: "pembayaran",
+      pas_foto: "member/pas_foto",
+      kartu_pelajar: "member/kartu_pelajar",
+      follow_ceg: "member/follow_ceg",
+      follow_tk: "member/follow_tk",
+    };
+
+    // Helper untuk mengambil path file dari multer
+    const getFilePath = (fieldname) => {
+      if (!req.files) return null;
+      const file = req.files.find((f) => f.fieldname === fieldname);
+      if (!file) return null;
+
+      // Tentukan subfolder berdasarkan fieldname
+      let subfolder = fieldToFolder[fieldname];
+      
+      // Untuk member_*_namafield, extract namafield
+      const memberMatch = fieldname.match(/^member_\d+_(.+)$/);
+      if (memberMatch) {
+        const fileType = memberMatch[1];
+        subfolder = fieldToFolder[fileType] || "lainnya";
+      }
+
+      // Return relative path untuk disimpan di database
+      return subfolder ? `${subfolder}/${file.filename}` : file.filename;
+    };
+
+    // Ambil bukti pembayaran dengan path folder
+    const buktiPembayaranFile = getFilePath("bukti_pembayaran");
+
+    // Validasi input utama
+    if (!nama_tim || !password || !asal_sekolah) {
+      return res.status(400).json({
+        success: false,
+        message: "nama tim, password, dan asal sekolah wajib diisi",
+      });
+    }
+
+    // Mulai transaksi database
+    await connection.beginTransaction();
+    transactionStarted = true;
+
+    // Cek apakah nama tim sudah terdaftar
     const [existingUser] = await connection.execute(
-      "SELECT id FROM `user` WHERE nama_tim = ?",
+      "select id from user where nama_tim = ?",
       [nama_tim]
     );
 
     if (existingUser.length > 0) {
       await connection.rollback();
-      return res
-        .status(409)
-        .json({ success: false, message: "Nama tim sudah terdaftar." });
+      return res.status(409).json({
+        success: false,
+        message: "nama tim sudah terdaftar",
+      });
     }
 
-    // 6. INSERT KE TABEL USER
+    // Insert data ke tabel user
     const [insertUser] = await connection.execute(
-      "INSERT INTO `user` (nama_tim, password, role, selected_card) VALUES (?, ?, 'PESERTA', NULL)",
+      "insert into user (nama_tim, password, role, selected_card) values (?, ?, 'peserta', null)",
       [nama_tim, password]
     );
+
     const newUserId = insertUser.insertId;
 
-    // 7. INSERT KE TABEL TIM
+    // Insert data ke tabel tim
     await connection.execute(
-      `INSERT INTO tim (
+      `insert into tim (
         user_id, email, asal_sekolah, no_wa, id_line,
-        kategori_biaya, paket, bukti_pembayaran, status_pembayaran, notes, total_points, total_coin, status
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'unverified', '', 0, 0, 'KOSONG')`,
+        kategori_biaya, paket, bukti_pembayaran,
+        status_pembayaran, notes, total_points, total_coin, status
+      ) values (?, ?, ?, ?, ?, ?, ?, ?, 'unverified', '', 0, 0, 'kosong')`,
       [
         newUserId,
         email ?? null,
@@ -90,52 +129,70 @@ export const register = async (req, res) => {
         id_line ?? null,
         kategori_biaya,
         paket,
-        buktiPembayaranFile, // <--- ISI DENGAN NAMA FILE DARI MULTER
+        buktiPembayaranFile,
       ]
     );
 
-    // 8. INSERT KE TABEL MEMBER
+    // Insert data anggota tim
     for (let i = 0; i < members.length; i++) {
       const member = members[i];
 
-      // Cari nama file untuk setiap member berdasarkan index (0, 1, 2)
-      // Nama field ini harus SAMA PERSIS dengan yang dikirim dari Frontend (FormData)
-      const pasFoto = getFilename(`member_${i}_pas_foto`);
-      const kartuPelajar = getFilename(`member_${i}_kartu_pelajar`);
-      const followCeg = getFilename(`member_${i}_follow_ceg`); // Sesuaikan nama field frontend
-      const followTk = getFilename(`member_${i}_follow_tk`); // Sesuaikan nama field frontend
+      // Validasi minimal data anggota
+      if (!member.nama_anggota || !member.pola_makan) {
+        await connection.rollback();
+        return res.status(400).json({
+          success: false,
+          message: `data anggota ke-${i + 1} belum lengkap`,
+        });
+      }
+
+      const pasFoto = getFilePath(`member_${i}_pas_foto`);
+      const kartuPelajar = getFilePath(`member_${i}_kartu_pelajar`);
+      const followCeg = getFilePath(`member_${i}_follow_ceg`);
+      const followTk = getFilePath(`member_${i}_follow_tk`);
 
       await connection.execute(
-        `INSERT INTO member (
+        `insert into member (
           tim_user_id, nama_anggota, pola_makan, alergi, penyakit_bawaan,
           pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tkubaya
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        ) values (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           newUserId,
           member.nama_anggota,
           member.pola_makan,
-          member.alergi || "-",
-          member.penyakit_bawaan || "-",
-          pasFoto, // Simpan nama file
-          kartuPelajar, // Simpan nama file
-          followCeg, // Simpan nama file
-          followTk, // Simpan nama file
+          member.alergi ?? null,
+          member.penyakit_bawaan ?? null,
+          pasFoto,
+          kartuPelajar,
+          followCeg,
+          followTk,
         ]
       );
     }
 
-    // SELESAI
+    // Simpan semua perubahan ke database
     await connection.commit();
-    return res
-      .status(201)
-      .json({ success: true, message: "Pendaftaran Berhasil" });
+
+    return res.status(201).json({
+      success: true,
+      message: "pendaftaran berhasil",
+    });
+
   } catch (error) {
-    await connection.rollback();
-    console.error("REGISTER ERROR:", error);
-    return res
-      .status(500)
-      .json({ success: false, message: "Server Error: " + error.message });
+    // Batalkan transaksi jika terjadi error
+    if (transactionStarted) {
+      await connection.rollback();
+    }
+
+    console.error("register error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "server error: " + error.message,
+    });
+
   } finally {
+    // Kembalikan koneksi ke pool
     connection.release();
   }
 };

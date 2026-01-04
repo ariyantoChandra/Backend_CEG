@@ -4,20 +4,30 @@ export const getTeamDetail = async (req, res) => {
   try {
     const { teamId } = req.params;
 
-    // 1. Ambil Data Tim
-    const [teamRows] = await db.execute("SELECT * FROM tim WHERE user_id = ?", [
-      teamId,
-    ]);
-
-    if (teamRows.length === 0) {
-      return res
-        .status(404)
-        .json({ success: false, message: "Tim tidak ditemukan" });
+    // Validasi team id
+    if (!teamId) {
+      return res.status(400).json({
+        success: false,
+        message: "team id wajib dikirim",
+      });
     }
 
-    // 2. Ambil Data Member
+    // Mengambil data tim berdasarkan user_id
+    const [teamRows] = await db.execute(
+      "select * from tim where user_id = ?",
+      [teamId]
+    );
+
+    if (teamRows.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "tim tidak ditemukan",
+      });
+    }
+
+    // Mengambil data member berdasarkan user_id
     const [memberRows] = await db.execute(
-      "SELECT * FROM member WHERE tim_user_id = ?",
+      "select * from member where tim_user_id = ?",
       [teamId]
     );
 
@@ -28,8 +38,12 @@ export const getTeamDetail = async (req, res) => {
         members: memberRows,
       },
     });
+
   } catch (error) {
-    console.error("GET TEAM DETAIL ERROR:", error);
-    return res.status(500).json({ success: false, message: error.message });
+    console.error("get team detail error:", error);
+    return res.status(500).json({
+      success: false,
+      message: "terjadi kesalahan server",
+    });
   }
 };

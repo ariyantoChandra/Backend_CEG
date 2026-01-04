@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 // STATIC FILE SERVING (PENTING UNTUK GAMBAR)
 // Ini membuka akses ke folder public/uploads agar bisa dilihat di browser
 // Contoh akses: http://localhost:5000/public/uploads/NamaTim_pas_foto.jpg
-app.use("/public", express.static(path.join(__dirname, "public")));
+// app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Endpoint cek server
 app.get("/", (req, res) => {

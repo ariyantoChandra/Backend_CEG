@@ -91,12 +91,12 @@ export const matchResult = async (req, res) => {
         );
 
         await db.execute(
-          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          "UPDATE tim SET status = 'KOSONG', current_pos = NULL WHERE user_id = ?",
           [checkStatus[0].tim_id1]
         );
 
         await db.execute(
-          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          "UPDATE tim SET status = 'KOSONG', current_pos = NULL WHERE user_id = ?",
           [checkStatus[0].tim_id2]
         );
 
@@ -130,12 +130,12 @@ export const matchResult = async (req, res) => {
         );
 
         await db.execute(
-          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          "UPDATE tim SET status = 'KOSONG', current_pos = NULL WHERE user_id = ?",
           [checkStatus[0].tim_id1]
         );
 
         await db.execute(
-          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          "UPDATE tim SET status = 'KOSONG', current_pos = NULL WHERE user_id = ?",
           [checkStatus[0].tim_id2]
         );
 
@@ -186,7 +186,7 @@ export const matchResult = async (req, res) => {
         );
 
         await db.execute(
-          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          "UPDATE tim SET status = 'KOSONG', current_pos = NULL WHERE user_id = ?",
           [tim_id]
         );
 
@@ -210,7 +210,7 @@ export const matchResult = async (req, res) => {
         );
 
         await db.execute(
-          "UPDATE tim SET status = 'KOSONG' WHERE user_id = ?",
+          "UPDATE tim SET status = 'KOSONG', current_pos = NULL WHERE user_id = ?",
           [tim_id]
         );
 

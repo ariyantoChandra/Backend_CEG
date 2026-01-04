@@ -38,10 +38,25 @@ export const getListPos = async (req, res) => {
       });
     }
 
+    // Add isPlayed field for each pos
+    const posWithIsPlayed = await Promise.all(
+      list_pos.map(async (pos) => {
+        const [gameSession] = await db.execute(
+          "SELECT * FROM game_session WHERE penpos_id = ? AND (tim_id1 = ? OR tim_id2 = ?) AND end_time IS NOT NULL",
+          [pos.penpos_id, userId, userId]
+        );
+
+        return {
+          ...pos,
+          isPlayed: gameSession.length > 0 ? true : false,
+        };
+      })
+    );
+
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan list pos!",
-      data: list_pos,
+      data: posWithIsPlayed,
     });
   } catch (error) {
     console.error("ERROR GET LIST POS:", error);

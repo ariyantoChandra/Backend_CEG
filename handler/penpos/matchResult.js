@@ -81,12 +81,12 @@ export const matchResult = async (req, res) => {
         );
 
         await db.execute(
-          "UPDATE tim SET total_points = total_points + 5 WHERE user_id = ?",
+          "UPDATE tim SET total_points = total_points + 5, total_coin = total_coin + 5 WHERE user_id = ?",
           [checkStatus[0].tim_id1]
         );
 
         await db.execute(
-          "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
+          "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
           [checkStatus[0].tim_id2]
         );
 
@@ -120,12 +120,12 @@ export const matchResult = async (req, res) => {
         );
 
         await db.execute(
-          "UPDATE tim SET total_points = total_points + 5 WHERE user_id = ?",
+          "UPDATE tim SET total_points = total_points + 5, total_coin = total_coin + 5 WHERE user_id = ?",
           [checkStatus[0].tim_id2]
         );
 
         await db.execute(
-          "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
+          "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
           [checkStatus[0].tim_id1]
         );
 
@@ -180,8 +180,9 @@ export const matchResult = async (req, res) => {
           "UPDATE game_session SET end_time = NOW(), score1 = 5 WHERE id = ?",
           [game_session_id]
         );
+
         await db.execute(
-          "UPDATE tim SET total_points = total_points + 5 WHERE user_id = ?",
+          "UPDATE tim SET total_points = total_points + 5, total_coin = total_coin + 5 WHERE user_id = ?",
           [tim_id]
         );
 
@@ -205,7 +206,7 @@ export const matchResult = async (req, res) => {
           [game_session_id]
         );
         await db.execute(
-          "UPDATE tim SET total_points = total_points + 1 WHERE user_id = ?",
+          "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
           [tim_id]
         );
 

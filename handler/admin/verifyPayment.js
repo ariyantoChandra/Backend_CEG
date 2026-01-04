@@ -35,9 +35,9 @@ export const verifyPayment = async (req, res) => {
       });
     }
 
-    // Update status pembayaran
+    // Update status pembayaran menggunakan user_id
     const [result] = await db.execute(
-      "update tim set status_pembayaran = ? where id = ?",
+      "update tim set status_pembayaran = ? where user_id = ?",
       [status, teamId]
     );
 

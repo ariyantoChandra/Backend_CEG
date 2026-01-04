@@ -27,12 +27,13 @@ export const getSortAnswer = async (req, res) => {
       });
     }
 
-    const { game_session_id, answer } = req.body;
+    const { game_session_id, answer, question_id } = req.body;
 
-    if (!game_session_id || !Array.isArray(answer)) {
+    if (!game_session_id || !Array.isArray(answer) || !question_id) {
       return res.status(400).json({
         success: false,
-        message: "game_session_id dan answer (array) wajib dikirim",
+        message:
+          "game_session_id, answer (array), dan question_id wajib dikirim",
       });
     }
 
@@ -51,20 +52,25 @@ export const getSortAnswer = async (req, res) => {
     const session = gameSession[0];
 
     const [correctAnswers] = await db.execute(
-      "SELECT urutan, alat_bahan_id as id_barang FROM alat_bahan_terpilih"
+      "SELECT urutan, alat_bahan_id as id_barang, score FROM alat_bahan_terpilih WHERE question_id = ? ORDER BY urutan ASC",
+      [question_id]
     );
 
-    const correctMap = new Map();
+    const scoreMap = new Map();
 
     for (const item of correctAnswers) {
-      correctMap.set(item.urutan, item.id_barang);
+      scoreMap.set(item.urutan, {
+        id_barang: item.id_barang,
+        score: item.score,
+      });
     }
 
     let correctCount = 0;
 
     for (const item of answer) {
-      if (correctMap.get(item.urutan_kotak) === item.id_barang) {
-        correctCount++;
+      const correct = scoreMap.get(item.urutan_kotak);
+      if (correct && correct.id_barang === item.id_barang) {
+        correctCount += correct.score;
       }
     }
 
@@ -89,7 +95,7 @@ export const getSortAnswer = async (req, res) => {
       success: true,
       message: "Jawaban diproses",
       data: {
-        total_benar: correctCount,
+        total_poin: correctCount,
       },
     });
   } catch (error) {

@@ -37,7 +37,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Amri siap digunakan! encrut dalam",
+    message: "Amri siap digunakan! encrut ceg2026",
   });
 });
 

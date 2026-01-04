@@ -51,7 +51,7 @@ export const checkAcc = async (req, res) => {
       });
     }
 
-    const namaTim = rows[0]?.nama_tim;
+    const namaTim = pos_name[0]?.nama_tim;
     const slugNamaTim = namaTim.toLowerCase().trim().replace(/\s+/g, "-");
 
     return res.status(200).json({

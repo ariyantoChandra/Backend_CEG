@@ -2,9 +2,9 @@ import db from "../../config/database.js";
 
 export const checkStatusPendaftaran = async (req, res) => {
   try {
-    const { nama_tim } = req.query; // bisa juga ambil dari JWT kalau mau
+    const { user_id } = req.query; // bisa juga ambil dari JWT kalau mau
 
-    if (!nama_tim) {
+    if (!user_id) {
       return res.status(400).json({
         success: false,
         message: "Nama tim wajib diisi.",
@@ -12,8 +12,8 @@ export const checkStatusPendaftaran = async (req, res) => {
     }
 
     const [rows] = await db.execute(
-      "SELECT nama_tim, status_pembayaran FROM tim WHERE nama_tim = ?",
-      [nama_tim]
+      "SELECT user_id, status_pembayaran FROM tim WHERE user_id = ?",
+      [user_id]
     );
 
     if (rows.length === 0) {
@@ -27,7 +27,7 @@ export const checkStatusPendaftaran = async (req, res) => {
       success: true,
       message: "Berhasil mendapatkan status pendaftaran",
       data: {
-        nama_tim: rows[0].nama_tim,
+        user_id: rows[0].user_id,
         status_pembayaran: rows[0].status_pembayaran, // verified / unverified
       },
     });

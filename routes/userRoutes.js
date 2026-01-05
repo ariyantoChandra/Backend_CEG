@@ -1,6 +1,8 @@
 import express from "express";
 // Import Handler Auth
 import { register } from "../handler/auth/register.js";
+// Import Verifikasi Peserta
+import { checkStatusPendaftaran } from "../handler/user/checkStatusPembayaran.js";
 
 // Import Handler User/Game
 import { getListPos } from "../handler/user/pos/getListPos.js";
@@ -46,6 +48,8 @@ router.post("/question/get-answer", getAnswer);
 router.post("/cpbattle/get-cp-tools", getCPTools);
 router.post("/cpbattle/get-cp-question", getCPQuestion);
 router.post("/cpbattle/get-cp-answer", getCPAnswer);
+//checkstatuspembayaran
+router.get("/check-status-pembayaran", checkStatusPendaftaran);
 
 // BARIS DI BAWAH INI WAJIB ADA AGAR INDEX.JS TIDAK ERROR:
 export default router;

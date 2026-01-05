@@ -1,7 +1,4 @@
 import db from "../../config/database.js";
-// HAPUS import uuid karena ID database Anda Auto Increment (Integer)
-// import { v4 as uuidv4 } from "uuid"; 
-
 // Helper untuk mengambil nama file
 const getFilePath = (files, fieldname) => {
   if (files && files[fieldname]) {

@@ -18,7 +18,7 @@ export const getAllTeams = async (req, res) => {
         t.total_points
       FROM tim t
       JOIN user u ON t.user_id = u.id
-      ORDER BY t.created_at DESC
+      ORDER BY t.user_id DESC
     `);
 
     return res.status(200).json({

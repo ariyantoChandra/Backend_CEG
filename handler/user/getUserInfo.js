@@ -6,28 +6,30 @@ export const getUserInfo = async (req, res) => {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       return res.status(401).json({
-        status: "Failed",
-        message: "There is no Token sent!",
+        success: false,
+        message: "Token tidak ditemukan!",
       });
     }
+
     const token = authHeader.split(" ")[1];
     const { valid, expired, decoded } = checkToken(token);
-    const userId = decoded.id;
 
     if (!valid) {
       return res.status(401).json({
         success: false,
-        message: expired ? "Token expired." : "Token invalid.",
-      });
-    }
-    if (!userId) {
-      return res.status(401).json({
-        success: false,
-        message: "ID pengguna tidak ditemukan.",
+        message: expired ? "Token kadaluarsa." : "Token tidak valid.",
       });
     }
 
-    // UPDATE QUERY: Menambahkan field status_pembayaran, notes, paket, asal_sekolah, email
+    const userId = decoded.id;
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "ID pengguna tidak valid.",
+      });
+    }
+
+    // UPDATE QUERY: Mengambil field status_pembayaran, notes, paket
     const [info] = await db.execute(
       `SELECT 
         u.nama_tim, 
@@ -49,6 +51,7 @@ export const getUserInfo = async (req, res) => {
         message: "User tidak ditemukan!",
       });
     }
+
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan info user!",

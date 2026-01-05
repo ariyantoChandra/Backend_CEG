@@ -23,6 +23,7 @@ export const register = async (req, res) => {
       kategori_biaya,
       paket,
       members: membersString,
+      bukti_pembayaran_path,
     } = req.body;
 
     // Parsing data members dari formdata
@@ -78,7 +79,9 @@ export const register = async (req, res) => {
     };
 
     // Ambil bukti pembayaran dengan path folder
-    const buktiPembayaranFile = getFilePath("bukti_pembayaran");
+    // Prioritas: jika ada bukti_pembayaran_path dari request (untuk bundle tim 2 & 3), gunakan itu
+    // Jika tidak, ambil dari file upload (untuk tim pertama)
+    let finalBuktiPembayaranFile = bukti_pembayaran_path || getFilePath("bukti_pembayaran");
 
     // Validasi input utama
     if (!nama_tim || !password || !asal_sekolah) {
@@ -129,7 +132,7 @@ export const register = async (req, res) => {
         id_line ?? null,
         kategori_biaya,
         paket,
-        buktiPembayaranFile,
+        finalBuktiPembayaranFile,
       ]
     );
 
@@ -176,6 +179,10 @@ export const register = async (req, res) => {
     return res.status(201).json({
       success: true,
       message: "pendaftaran berhasil",
+      data: {
+        userId: newUserId,
+        buktiPembayaranPath: finalBuktiPembayaranFile,
+      },
     });
 
   } catch (error) {

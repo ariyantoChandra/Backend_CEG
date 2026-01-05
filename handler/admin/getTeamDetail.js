@@ -12,10 +12,21 @@ export const getTeamDetail = async (req, res) => {
       });
     }
 
-    // Mengambil data tim berdasarkan user_id
+    // UPDATE QUERY: Tambahkan paket, kategori_biaya, notes, bukti_pembayaran
     const [teamRows] = await db.execute(
-      "select * from tim where user_id = ?",
+      `SELECT 
+        id, user_id, email, asal_sekolah, no_wa, id_line, 
+        kategori_biaya, paket, bukti_pembayaran, 
+        status_pembayaran, notes, total_points, status
+       FROM tim 
+       WHERE user_id = ?`,
       [teamId]
+    );
+
+    // Ambil nama tim dari tabel user
+    const [userRows] = await db.execute(
+        "SELECT nama_tim FROM user WHERE id = ?",
+        [teamId]
     );
 
     if (teamRows.length === 0) {
@@ -24,6 +35,11 @@ export const getTeamDetail = async (req, res) => {
         message: "tim tidak ditemukan",
       });
     }
+
+    const teamData = {
+        ...teamRows[0],
+        nama_tim: userRows[0]?.nama_tim || "Unknown Team"
+    };
 
     // Mengambil data member berdasarkan user_id
     const [memberRows] = await db.execute(
@@ -34,7 +50,7 @@ export const getTeamDetail = async (req, res) => {
     return res.status(200).json({
       success: true,
       data: {
-        ...teamRows[0],
+        ...teamData,
         members: memberRows,
       },
     });

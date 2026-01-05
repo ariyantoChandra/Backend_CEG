@@ -1,5 +1,4 @@
 import db from "../../config/database.js";
-import bcrypt from "bcrypt";
 // HAPUS import uuid karena ID database Anda Auto Increment (Integer)
 // import { v4 as uuidv4 } from "uuid"; 
 
@@ -106,7 +105,7 @@ export const register = async (req, res) => {
       await connection.execute(
         `INSERT INTO member (
           tim_user_id, nama_anggota, pola_makan, alergi, penyakit_bawaan,
-          pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tekikkimia
+          pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tk
          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           userId,

@@ -1,18 +1,24 @@
 import db from "../../config/database.js";
+import bcrypt from "bcrypt";
+// HAPUS import uuid karena ID database Anda Auto Increment (Integer)
+// import { v4 as uuidv4 } from "uuid"; 
+
+// Helper untuk mengambil nama file
+const getFilePath = (files, fieldname) => {
+  if (files && files[fieldname]) {
+    const file = Array.isArray(files[fieldname])
+      ? files[fieldname][0]
+      : files[fieldname];
+    return file.filename;
+  }
+  return null;
+};
 
 export const register = async (req, res) => {
-  // Ambil koneksi database dari pool
   const connection = await db.getConnection();
-
-  // Penanda apakah transaksi sudah dimulai
-  let transactionStarted = false;
+  await connection.beginTransaction();
 
   try {
-    // Debug data dari frontend
-    console.log("cek body:", req.body);
-    console.log("cek files:", req.files);
-
-    // Ambil data dari request body
     const {
       nama_tim,
       password,
@@ -20,84 +26,18 @@ export const register = async (req, res) => {
       asal_sekolah,
       no_wa,
       id_line,
-      kategori_biaya,
-      paket,
-      members: membersString,
-      bukti_pembayaran_path,
+      kategori_biaya, 
+      members,        
+      bukti_pembayaran_path, 
+      paket,          
+      status_pembayaran, 
     } = req.body;
 
-    // Parsing data members dari formdata
-    let members = [];
-    try {
-      if (typeof membersString === "string") {
-        members = JSON.parse(membersString);
-      } else if (Array.isArray(membersString)) {
-        members = membersString;
-      }
-    } catch {
-      return res.status(400).json({
-        success: false,
-        message: "format data member tidak valid",
-      });
-    }
+    const files = req.files;
 
-    // Pastikan members berbentuk array dan tidak kosong
-    if (!Array.isArray(members) || members.length === 0) {
-      return res.status(400).json({
-        success: false,
-        message: "minimal harus ada 1 anggota tim",
-      });
-    }
-
-    // Mapping field ke subfolder (sesuai dengan uploadImage.js)
-    const fieldToFolder = {
-      bukti_pembayaran: "pembayaran",
-      pas_foto: "member/pas_foto",
-      kartu_pelajar: "member/kartu_pelajar",
-      follow_ceg: "member/follow_ceg",
-      follow_tk: "member/follow_tk",
-    };
-
-    // Helper untuk mengambil path file dari multer
-    const getFilePath = (fieldname) => {
-      if (!req.files) return null;
-      const file = req.files.find((f) => f.fieldname === fieldname);
-      if (!file) return null;
-
-      // Tentukan subfolder berdasarkan fieldname
-      let subfolder = fieldToFolder[fieldname];
-      
-      // Untuk member_*_namafield, extract namafield
-      const memberMatch = fieldname.match(/^member_\d+_(.+)$/);
-      if (memberMatch) {
-        const fileType = memberMatch[1];
-        subfolder = fieldToFolder[fileType] || "lainnya";
-      }
-
-      // Return relative path untuk disimpan di database
-      return subfolder ? `${subfolder}/${file.filename}` : file.filename;
-    };
-
-    // Ambil bukti pembayaran dengan path folder
-    // Prioritas: jika ada bukti_pembayaran_path dari request (untuk bundle tim 2 & 3), gunakan itu
-    // Jika tidak, ambil dari file upload (untuk tim pertama)
-    let finalBuktiPembayaranFile = bukti_pembayaran_path || getFilePath("bukti_pembayaran");
-
-    // Validasi input utama
-    if (!nama_tim || !password || !asal_sekolah) {
-      return res.status(400).json({
-        success: false,
-        message: "nama tim, password, dan asal sekolah wajib diisi",
-      });
-    }
-
-    // Mulai transaksi database
-    await connection.beginTransaction();
-    transactionStarted = true;
-
-    // Cek apakah nama tim sudah terdaftar
+    // 1. CEK DUPLIKASI NAMA TIM
     const [existingUser] = await connection.execute(
-      "select id from user where nama_tim = ?",
+      "SELECT id FROM user WHERE nama_tim = ?",
       [nama_tim]
     );
 
@@ -105,66 +45,75 @@ export const register = async (req, res) => {
       await connection.rollback();
       return res.status(409).json({
         success: false,
-        message: "nama tim sudah terdaftar",
+        message: "Nama tim sudah terdaftar. Silakan gunakan nama lain.",
       });
     }
 
-    // Insert data ke tabel user
-    const [insertUser] = await connection.execute(
-      "insert into user (nama_tim, password, role, selected_card) values (?, ?, 'peserta', null)",
-      [nama_tim, password]
+    // 2. INSERT USER (GUNAKAN AUTO INCREMENT)
+    const hashedPassword = await bcrypt.hash(password, 10);
+    
+    // PERUBAHAN DISINI: Jangan kirim ID manual, biarkan null/default
+    const [userResult] = await connection.execute(
+      "INSERT INTO user (nama_tim, password, role) VALUES (?, ?, ?)",
+      [nama_tim, hashedPassword, "PESERTA"]
     );
 
-    const newUserId = insertUser.insertId;
+    // AMBIL ID YANG BARU SAJA DIBUAT OLEH DATABASE
+    const userId = userResult.insertId;
 
-    // Insert data ke tabel tim
+    // 3. LOGIKA BUKTI PEMBAYARAN
+    let finalBuktiPembayaran = getFilePath(files, "bukti_pembayaran");
+    
+    if (!finalBuktiPembayaran && bukti_pembayaran_path) {
+        finalBuktiPembayaran = bukti_pembayaran_path;
+    }
+
+    // 4. INSERT TIM (Gunakan userId yang didapat dari insertId)
     await connection.execute(
-      `insert into tim (
-        user_id, email, asal_sekolah, no_wa, id_line,
-        kategori_biaya, paket, bukti_pembayaran,
-        status_pembayaran, notes, total_points, total_coin, status
-      ) values (?, ?, ?, ?, ?, ?, ?, ?, 'unverified', '', 0, 0, 'kosong')`,
+      `INSERT INTO tim (
+        user_id, email, asal_sekolah, no_wa, id_line, 
+        kategori_biaya, status_pembayaran, bukti_pembayaran, paket
+       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
-        newUserId,
-        email ?? null,
+        userId,
+        email,
         asal_sekolah,
-        no_wa ?? null,
-        id_line ?? null,
-        kategori_biaya,
-        paket,
-        finalBuktiPembayaranFile,
+        no_wa,
+        id_line,
+        kategori_biaya || "NORMAL",
+        status_pembayaran || "unverified",
+        finalBuktiPembayaran,
+        paket || "SINGLE",
       ]
     );
 
-    // Insert data anggota tim
-    for (let i = 0; i < members.length; i++) {
-      const member = members[i];
+    // 5. INSERT MEMBERS
+    let membersArray = [];
+    try {
+      membersArray = JSON.parse(members);
+    } catch (e) {
+      membersArray = [];
+    }
 
-      // Validasi minimal data anggota
-      if (!member.nama_anggota || !member.pola_makan) {
-        await connection.rollback();
-        return res.status(400).json({
-          success: false,
-          message: `data anggota ke-${i + 1} belum lengkap`,
-        });
-      }
-
-      const pasFoto = getFilePath(`member_${i}_pas_foto`);
-      const kartuPelajar = getFilePath(`member_${i}_kartu_pelajar`);
-      const followCeg = getFilePath(`member_${i}_follow_ceg`);
-      const followTk = getFilePath(`member_${i}_follow_tk`);
+    for (let i = 0; i < membersArray.length; i++) {
+      const m = membersArray[i];
+      
+      const pasFoto = getFilePath(files, `member_${i}_pas_foto`);
+      const kartuPelajar = getFilePath(files, `member_${i}_kartu_pelajar`);
+      const followCeg = getFilePath(files, `member_${i}_follow_ceg`);
+      const followTk = getFilePath(files, `member_${i}_follow_tk`);
 
       await connection.execute(
-        `insert into member (
+        `INSERT INTO member (
           tim_user_id, nama_anggota, pola_makan, alergi, penyakit_bawaan,
-          pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tkubaya
-        ) values (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          pas_foto, kartu_pelajar, bukti_follow_ceg, bukti_follow_tekikkimia
+         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
-          newUserId,
-          member.nama_anggota,
-          member.pola_makan,
-          member.alergi ?? null,
-          member.penyakit_bawaan ?? null,
+          userId,
+          m.nama_anggota,
+          m.pola_makan,
+          m.alergi,
+          m.penyakit_bawaan,
           pasFoto,
           kartuPelajar,
           followCeg,
@@ -173,33 +122,25 @@ export const register = async (req, res) => {
       );
     }
 
-    // Simpan semua perubahan ke database
     await connection.commit();
 
-    return res.status(201).json({
+    return res.status(200).json({
       success: true,
-      message: "pendaftaran berhasil",
+      message: "Registrasi berhasil.",
       data: {
-        userId: newUserId,
-        buktiPembayaranPath: finalBuktiPembayaranFile,
+        userId: userId,
+        buktiPembayaranPath: finalBuktiPembayaran, 
       },
     });
 
   } catch (error) {
-    // Batalkan transaksi jika terjadi error
-    if (transactionStarted) {
-      await connection.rollback();
-    }
-
-    console.error("register error:", error);
-
+    await connection.rollback();
+    console.error("REGISTER ERROR:", error);
     return res.status(500).json({
       success: false,
-      message: "server error: " + error.message,
+      message: "Terjadi kesalahan server saat registrasi.",
     });
-
   } finally {
-    // Kembalikan koneksi ke pool
     connection.release();
   }
 };

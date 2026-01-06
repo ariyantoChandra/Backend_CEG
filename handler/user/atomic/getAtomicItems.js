@@ -27,8 +27,7 @@ export const getAtomicItems = async (req, res) => {
       });
     }
 
-    const page = req.query.page || 1;
-    const { game_session_id } = req.body;
+    const { game_session_id, page } = req.body;
 
     if (!game_session_id) {
       return res.status(400).json({

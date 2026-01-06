@@ -106,10 +106,10 @@ export const register = async (req, res) => {
         // Kita ambil file sesuai format key dari Frontend: t{i}_m{j}_...
         // i = index tim, j = index member
 
-        const pasFoto = getFilePath(files, `member_${j}_pas_foto`);
-        const kartuPelajar = getFilePath(files, `member_${j}_kartu_pelajar`);
-        const followCeg = getFilePath(files, `member_${j}_follow_ceg`);
-        const followTk = getFilePath(files, `member_${j}_follow_tk`);
+        const pasFoto = getFilePath(files, `t${i}_m${j}_pas_foto`);
+        const kartuPelajar = getFilePath(files, `t${i}_m${j}_kartu_pelajar`);
+        const followCeg = getFilePath(files, `t${i}_m${j}_follow_ceg`);
+        const followTk = getFilePath(files, `t${i}_m${j}_follow_tk`);
 
         await connection.execute(
           `INSERT INTO member (

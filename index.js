@@ -37,7 +37,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Tangan ga usah gatel, udah lomba aja sono!",
+    message: "Tangan ga usah gatel bang, udah lomba aja sono!",
   });
 });
 

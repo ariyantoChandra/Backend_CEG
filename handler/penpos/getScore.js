@@ -1,4 +1,4 @@
-import db from "../../config/database";
+import db from "../../config/database.js";
 import { checkToken } from "../../config/checkToken.js";
 
 export const getScore = async (req, res) => {

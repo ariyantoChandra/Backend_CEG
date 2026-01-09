@@ -108,8 +108,14 @@ export const register = async (req, res) => {
 
         const pasFoto = getFilePath(files, `t${i}_m${j}_pas_foto`);
         const kartuPelajar = getFilePath(files, `t${i}_m${j}_kartu_pelajar`);
-        const followCeg = getFilePath(files, `t${i}_m${j}_follow_ceg`);
-        const followTk = getFilePath(files, `t${i}_m${j}_follow_tk`);
+        const followCeg = getFilePath(
+          files,
+          `${m.usn_ig}_t${i}_m${j}_follow_ceg`
+        );
+        const followTk = getFilePath(
+          files,
+          `${m.usn_ig}_t${i}_m${j}_follow_tk`
+        );
 
         await connection.execute(
           `INSERT INTO member (

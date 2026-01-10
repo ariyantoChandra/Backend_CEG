@@ -19,9 +19,17 @@ const getSubfolderByField = (fieldname) => {
   // 1. Cek Exact Match
   if (fieldToFolder[fieldname]) return fieldToFolder[fieldname];
 
-  // 2. Cek Pattern Bundle/Single Baru (t0_m0_pas_foto)
+  // 2. Cek Pattern Bundle/Single dengan usn_ig (.+_t0_m0_pas_foto)
+  // Regex: [apapun]_t[angka]_m[angka]_[tipefile]
+  let match = fieldname.match(/^.+_t\d+_m\d+_(.+)$/);
+  if (match) {
+    const fileType = match[1]; // ambil kata "pas_foto" atau "follow_ceg"
+    if (fieldToFolder[fileType]) return fieldToFolder[fileType];
+  }
+
+  // 3. Cek Pattern tanpa usn_ig (t0_m0_pas_foto)
   // Regex: t[angka]_m[angka]_[tipefile]
-  const match = fieldname.match(/^t\d+_m\d+_(.+)$/);
+  match = fieldname.match(/^t\d+_m\d+_(.+)$/);
   if (match) {
     const fileType = match[1]; // ambil kata "pas_foto"
     if (fieldToFolder[fileType]) return fieldToFolder[fileType];

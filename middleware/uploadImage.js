@@ -62,24 +62,16 @@ const storage = multer.diskStorage({
     }
 
     // 2. ANALISA KEY: tX_mY_tipefile (Contoh: t0_m0_pas_foto)
-    const match = file.fieldname.match(/^t(\d+)_m(\d+)_(.+)$/);
+    const match = file.fieldname.match(/^(.+)_t(\d+)_m(\d+)_(.+)$/);
 
     if (match) {
-      const teamIndex = parseInt(match[1]);   // t0 -> 0
-      const memberIndex = parseInt(match[2]); // m0 -> 0
-      // const fileType = match[3];           // pas_foto (Opsional kalo mau dipake)
+      const usnIg = match[1];
+      const teamIndex = parseInt(match[2]); // t0 -> 0
+      const memberIndex = parseInt(match[3]); // m0 -> 0
+      const fileType = match[4]; // pas_foto (Opsional kalo mau dipake)
 
-      // Ambil Nama Tim Asli berdasarkan Index t0 tadi
-      if (teams[teamIndex] && teams[teamIndex].nama_tim) {
-        const realTeamName = teams[teamIndex].nama_tim.replace(/\s+/g, "_");
-        
-        // FORMAT CANTIK: NamaTim_member_0_pas_foto_Timestamp.png
-        finalName = `${realTeamName}_member_${memberIndex}_${match[3]}`;
-      } else {
-        // Kalau nama tim gak ketemu, terpaksa pake t0_m0
-        finalName = file.fieldname;
-      }
-    } 
+      finalName = `${usnIg}_t${teamIndex}_m${memberIndex}_${fileType}`;
+    }
     // 3. CEK BUKTI PEMBAYARAN
     else if (file.fieldname === "bukti_pembayaran") {
       // Biasanya milik tim pertama (index 0)
@@ -89,12 +81,12 @@ const storage = multer.diskStorage({
       } else {
         finalName = "bukti_pembayaran";
       }
-    } 
+    }
     // 4. FALLBACK LAINNYA
     else {
-        // Coba cari nama tim kalau file lain
-        const prefix = teams[0]?.nama_tim?.replace(/\s+/g, "_") || "UNKNOWN";
-        finalName = `${prefix}_${file.fieldname}`;
+      // Coba cari nama tim kalau file lain
+      const prefix = teams[0]?.nama_tim?.replace(/\s+/g, "_") || "UNKNOWN";
+      finalName = `${prefix}_${file.fieldname}`;
     }
 
     // Gabungkan nama final dengan timestamp & ekstensi
@@ -104,7 +96,10 @@ const storage = multer.diskStorage({
 
 const fileFilter = (req, file, cb) => {
   const allowedTypes = /jpeg|jpg|png/;
-  if (allowedTypes.test(file.mimetype) && allowedTypes.test(path.extname(file.originalname).toLowerCase())) {
+  if (
+    allowedTypes.test(file.mimetype) &&
+    allowedTypes.test(path.extname(file.originalname).toLowerCase())
+  ) {
     cb(null, true);
   } else {
     cb(new Error("Hanya file gambar (JPG/PNG)!"));

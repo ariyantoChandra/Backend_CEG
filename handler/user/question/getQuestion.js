@@ -27,9 +27,7 @@ export const getQuestion = async (req, res) => {
       });
     }
 
-    const page = req.query.page || 1;
-
-    const { game_session_id } = req.body;
+    const { game_session_id, page } = req.body;
 
     if (!game_session_id) {
       return res.status(400).json({
@@ -38,9 +36,16 @@ export const getQuestion = async (req, res) => {
       });
     }
 
+    if (!page) {
+      return res.status(400).json({
+        success: false,
+        message: "Page number is required.",
+      });
+    }
+
     const [gameSession] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND end_time IS NULL",
-      [game_session_id]
+      [game_session_id],
     );
 
     if (gameSession.length === 0) {

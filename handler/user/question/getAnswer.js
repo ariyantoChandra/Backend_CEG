@@ -27,8 +27,7 @@ export const getAnswer = async (req, res) => {
       });
     }
 
-    const { game_session_id, answer } = req.body;
-    const page = req.query.page || 1;
+    const { game_session_id, answer, page } = req.body;
 
     if (!game_session_id || !answer) {
       return res.status(400).json({
@@ -37,9 +36,16 @@ export const getAnswer = async (req, res) => {
       });
     }
 
+    if (!page) {
+      return res.status(400).json({
+        success: false,
+        message: "Page number is required.",
+      });
+    }
+
     const [gameSession] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND end_time IS NULL",
-      [game_session_id]
+      [game_session_id],
     );
 
     if (gameSession.length === 0) {
@@ -53,7 +59,7 @@ export const getAnswer = async (req, res) => {
 
     const [correctAnswers] = await db.execute(
       "SELECT jawaban_benar FROM soal WHERE id = ?",
-      [page]
+      [page],
     );
 
     if (correctAnswers.length === 0) {
@@ -67,12 +73,12 @@ export const getAnswer = async (req, res) => {
       if (session.tim_id1 === userId) {
         await db.execute(
           "UPDATE game_session SET score1 = score1 + 1 WHERE id = ?",
-          [game_session_id]
+          [game_session_id],
         );
       } else if (session.tim_id2 === userId) {
         await db.execute(
           "UPDATE game_session SET score2 = score2 + 1 WHERE id = ?",
-          [game_session_id]
+          [game_session_id],
         );
       }
 

@@ -55,9 +55,10 @@ export const getQuestion = async (req, res) => {
       });
     }
 
-    const [questions] = await db.execute("SELECT * FROM soal WHERE id = ?", [
-      page,
-    ]);
+    const [questions] = await db.execute(
+      "SELECT id, pertanyaan, opsi1, opsi2, opsi3, opsi4, gambar_soal, tipe FROM soal WHERE id = ?",
+      [page],
+    );
 
     if (questions.length === 0) {
       return res.status(404).json({

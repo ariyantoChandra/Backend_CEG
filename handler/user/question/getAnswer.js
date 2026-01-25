@@ -69,7 +69,9 @@ export const getAnswer = async (req, res) => {
       });
     }
 
-    if (correctAnswers[0].jawaban_benar === answer) {
+    if (
+      correctAnswers[0].jawaban_benar.toLowerCase() === answer.toLowerCase()
+    ) {
       if (session.tim_id1 === userId) {
         await db.execute(
           "UPDATE game_session SET score1 = score1 + 1 WHERE id = ?",

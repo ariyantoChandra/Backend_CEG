@@ -36,13 +36,9 @@ export const getCPTools = async (req, res) => {
       });
     }
 
-    const [cpTools] = await db.execute("SELECT * FROM cp_tools", [
-      game_session_id,
-    ]);
-
     const [gameSession] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND end_time IS NULL",
-      [game_session_id]
+      [game_session_id],
     );
 
     if (gameSession.length === 0) {
@@ -51,6 +47,8 @@ export const getCPTools = async (req, res) => {
         message: "Game session tidak ditemukan atau sudah selesai",
       });
     }
+
+    const [cpTools] = await db.execute("SELECT * FROM cp_tools");
 
     return res.status(200).json({
       success: true,

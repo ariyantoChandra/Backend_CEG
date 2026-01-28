@@ -27,8 +27,7 @@ export const getCPQuestion = async (req, res) => {
       });
     }
 
-    const { game_session_id } = req.body;
-    const cp_tool_id = req.query.toolId;
+    const { game_session_id, toolId } = req.body;
 
     if (!game_session_id) {
       return res.status(400).json({
@@ -39,7 +38,7 @@ export const getCPQuestion = async (req, res) => {
 
     const [gameSession] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND end_time IS NULL",
-      [game_session_id]
+      [game_session_id],
     );
 
     if (gameSession.length === 0) {
@@ -51,7 +50,7 @@ export const getCPQuestion = async (req, res) => {
 
     const [cpQuestion] = await db.execute(
       "SELECT question_text, option_a, option_b, option_c, option_d FROM cp_questions WHERE cp_tool_id = ?",
-      [cp_tool_id]
+      [toolId],
     );
 
     return res.status(200).json({
@@ -59,7 +58,7 @@ export const getCPQuestion = async (req, res) => {
       data: cpQuestion,
     });
   } catch (error) {
-    console.error("ERROR GET CP TOOLS:", error);
+    console.error("ERROR GET CP QUESTIONS:", error);
     return res.status(500).json({
       success: false,
       message: "Terjadi kesalahan server: " + error.message,

@@ -27,8 +27,7 @@ export const getCPAnswer = async (req, res) => {
       });
     }
 
-    const { game_session_id, answer } = req.body;
-    const cp_tool_id = req.query.toolId;
+    const { game_session_id, answer, toolId } = req.body;
 
     if (!game_session_id) {
       return res.status(400).json({
@@ -39,7 +38,7 @@ export const getCPAnswer = async (req, res) => {
 
     const [gameSession] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND end_time IS NULL",
-      [game_session_id]
+      [game_session_id],
     );
 
     if (gameSession.length === 0) {
@@ -51,39 +50,36 @@ export const getCPAnswer = async (req, res) => {
 
     const [cpQuestion] = await db.execute(
       "SELECT correct_answer FROM cp_questions WHERE cp_tool_id = ?",
-      [cp_tool_id]
-    );
-
-    const [gameState] = await db.execute(
-      "SELECT * FROM cp_game_state WHERE tim_user_id = ? AND game_session_id = ?",
-      [userId, game_session_id]
+      [toolId],
     );
 
     if (cpQuestion[0].correct_answer === answer) {
-      gameState[0].completed_count += 1;
-      await db.execute(
-        "UPDATE cp_game_state SET completed_count = ? WHERE id = ?",
-        [gameState[0].completed_count, gameState[0].id]
-      );
+      if (gameSession[0].tim_id1 === userId) {
+        await db.execute(
+          "UPDATE game_session SET score_team1 = score_team1 + 1 WHERE id = ?",
+          [game_session_id],
+        );
+      } else if (gameSession[0].tim_id2 === userId) {
+        await db.execute(
+          "UPDATE game_session SET score_team2 = score_team2 + 1 WHERE id = ?",
+          [game_session_id],
+        );
+      }
       return res.status(200).json({
         success: true,
         data: { correct: true },
       });
     } else if (cpQuestion[0].correct_answer !== answer) {
-      await db.execute(
-        "UPDATE cp_game_state SET freeze_until = ? WHERE id = ?",
-        [new Date(Date.now() + 15000), gameState[0].id]
-      );
+      await db.execute();
       return res.status(200).json({
         success: true,
         data: {
           correct: false,
-          freeze_until: new Date(Date.now() + 15000),
         },
       });
     }
   } catch (error) {
-    console.error("ERROR GET CP TOOLS:", error);
+    console.error("ERROR GET CP ANSWER:", error);
     return res.status(500).json({
       success: false,
       message: "Terjadi kesalahan server: " + error.message,

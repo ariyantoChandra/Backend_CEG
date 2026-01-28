@@ -34,10 +34,12 @@ app.use(express.urlencoded({ extended: true }));
 // Contoh akses: http://localhost:5000/public/uploads/NamaTim_pas_foto.jpg
 app.use("/public", express.static(path.join(__dirname, "public")));
 
+app.use("/images", express.static(path.join(__dirname, "images")));
+
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "gas kannn",
+    message: "Pull lagi ",
   });
 });
 

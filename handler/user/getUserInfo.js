@@ -34,15 +34,11 @@ export const getUserInfo = async (req, res) => {
       `SELECT 
         u.nama_tim, 
         t.total_points as points,
-        t.status_pembayaran,
-        t.notes,
-        t.paket,
-        t.asal_sekolah,
-        t.email
+        t.total_coins as coins
        FROM user u 
        INNER JOIN tim t ON u.id = t.user_id 
        WHERE u.id = ?`,
-      [userId]
+      [userId],
     );
 
     if (info.length === 0) {

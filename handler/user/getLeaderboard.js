@@ -33,9 +33,8 @@ export const getLeaderboard = async (req, res) => {
     const [info] = await db.execute(
       `SELECT 
         u.nama_tim, 
-        t.total_points as points,
-       FROM user u 
-       INNER JOIN tim t ON u.id = t.user_id`,
+        t.total_points as points 
+        FROM user u INNER JOIN tim t ON u.id = t.user_id`,
     );
 
     if (info.length === 0) {

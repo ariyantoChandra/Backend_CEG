@@ -47,7 +47,7 @@ export const getLeaderboard = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Berhasil mendapatkan leaderboard!",
-      data: info[0],
+      data: info,
     });
   } catch (error) {
     console.error("ERROR GET USER LEADERBOARD:", error);

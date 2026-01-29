@@ -56,12 +56,12 @@ export const getCPAnswer = async (req, res) => {
     if (cpQuestion[0].correct_answer === answer) {
       if (gameSession[0].tim_id1 === userId) {
         await db.execute(
-          "UPDATE game_session SET score_team1 = score_team1 + 1 WHERE id = ?",
+          "UPDATE game_session SET score1 = score1 + 1 WHERE id = ?",
           [game_session_id],
         );
       } else if (gameSession[0].tim_id2 === userId) {
         await db.execute(
-          "UPDATE game_session SET score_team2 = score_team2 + 1 WHERE id = ?",
+          "UPDATE game_session SET score2 = score2 + 1 WHERE id = ?",
           [game_session_id],
         );
       }
@@ -70,7 +70,6 @@ export const getCPAnswer = async (req, res) => {
         data: { correct: true },
       });
     } else if (cpQuestion[0].correct_answer !== answer) {
-      await db.execute();
       return res.status(200).json({
         success: true,
         data: {

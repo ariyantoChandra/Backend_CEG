@@ -34,7 +34,8 @@ export const getLeaderboard = async (req, res) => {
       `SELECT 
         u.nama_tim, 
         t.total_points as points 
-        FROM user u INNER JOIN tim t ON u.id = t.user_id`,
+        FROM user u INNER JOIN tim t ON u.id = t.user_id 
+        ORDER BY t.total_points DESC`,
     );
 
     if (info.length === 0) {

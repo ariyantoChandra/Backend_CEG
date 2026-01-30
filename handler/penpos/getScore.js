@@ -41,6 +41,11 @@ export const getScore = async (req, res) => {
       [game_session_id],
     );
 
+    const [timInfo] = await db.execute(
+      "SELECT id, nama_tim FROM user WHERE id IN (?, ?)",
+      [gameSession[0]?.tim_id1, gameSession[0]?.tim_id2],
+    );
+
     if (gameSession.length === 0) {
       return res.status(404).json({
         success: false,
@@ -74,8 +79,10 @@ export const getScore = async (req, res) => {
         data: {
           tim1: gameSession[0].tim_id1,
           total_poin1: gameSession[0].score1,
+          nama_tim1: timInfo[0].nama_tim,
           tim2: gameSession[0].tim_id2,
           total_poin2: gameSession[0].score2,
+          nama_tim2: timInfo[1].nama_tim,
         },
       });
     }

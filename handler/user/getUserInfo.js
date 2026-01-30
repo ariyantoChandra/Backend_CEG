@@ -34,7 +34,7 @@ export const getUserInfo = async (req, res) => {
       `SELECT 
         u.nama_tim, 
         t.total_points as points,
-        t.total_coins as coins
+        t.total_coin as coins
        FROM user u 
        INNER JOIN tim t ON u.id = t.user_id 
        WHERE u.id = ?`,

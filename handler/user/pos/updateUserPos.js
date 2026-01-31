@@ -28,9 +28,25 @@ export const updateUserPos = async (req, res) => {
       });
     }
 
+    const [checkGameSession] = await db.execute(
+      "SELECT * FROM game_session WHERE (tim_id1 = ? OR tim_id2 = ?) AND end_time IS NULL",
+      [userId, userId],
+    );
+
+    if (checkGameSession.length !== 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Sedang berada di game lain! Tidak dapat pindah pos. ",
+        data: {
+          game_session_id: checkGameSession[0].id,
+          penpos_id: checkGameSession[0].penpos_id,
+        },
+      });
+    }
+
     await db.execute(
       "UPDATE tim SET pos_game_id = ?, status = 'MENUNGGU' WHERE user_id = ?",
-      [current_pos, userId]
+      [current_pos, userId],
     );
 
     return res.status(200).json({

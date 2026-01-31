@@ -38,12 +38,12 @@ export const matchResult = async (req, res) => {
 
     const [checkStatus] = await db.execute(
       "SELECT * FROM game_session WHERE id = ? AND penpos_id = ? AND end_time IS NULL",
-      [game_session_id, userId]
+      [game_session_id, userId],
     );
 
     const [checkTipe] = await db.execute(
       "SELECT tipe FROM pos_game WHERE penpos_id = ?",
-      [userId]
+      [userId],
     );
 
     if (checkStatus.length === 0) {
@@ -55,16 +55,56 @@ export const matchResult = async (req, res) => {
 
     if (checkTipe[0].tipe === "BATTLE") {
       const { tim_menang, tim_kalah } = req.body;
+
+      // Kondisi: Kedua tim kalah (tidak ada tim menang)
+      if (!tim_menang && !tim_kalah) {
+        await db.execute(
+          "UPDATE game_session SET end_time = NOW(), score1 = 1 , score2 = 1 WHERE id = ? AND penpos_id = ?",
+          [game_session_id, userId],
+        );
+
+        await db.execute(
+          "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
+          [checkStatus[0].tim_id1],
+        );
+
+        await db.execute(
+          "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
+          [checkStatus[0].tim_id2],
+        );
+
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
+          [checkStatus[0].tim_id1],
+        );
+
+        await db.execute(
+          "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
+          [checkStatus[0].tim_id2],
+        );
+
+        await db.execute(
+          "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
+          [userId],
+        );
+
+        return res.status(200).json({
+          success: true,
+          message: `Kedua tim kalah dan masing-masing mendapatkan 1 poin!`,
+        });
+      }
+
       if (!tim_menang || !tim_kalah) {
         return res.status(400).json({
           success: false,
-          message: "tim_menang dan tim_kalah wajib dikirim",
+          message:
+            "tim_menang dan tim_kalah wajib dikirim atau kedua-duanya kosong untuk kedua tim kalah",
         });
       }
 
       if (
         ![checkStatus[0].tim_id1, checkStatus[0].tim_id2].includes(
-          tim_menang
+          tim_menang,
         ) ||
         ![checkStatus[0].tim_id1, checkStatus[0].tim_id2].includes(tim_kalah)
       ) {
@@ -77,32 +117,32 @@ export const matchResult = async (req, res) => {
       if (checkStatus[0].tim_id1 === tim_menang) {
         await db.execute(
           "UPDATE game_session SET end_time = NOW(), score1 = 5 , score2 = 1 WHERE id = ? AND penpos_id = ?",
-          [game_session_id, userId]
+          [game_session_id, userId],
         );
 
         await db.execute(
           "UPDATE tim SET total_points = total_points + 5, total_coin = total_coin + 5 WHERE user_id = ?",
-          [checkStatus[0].tim_id1]
+          [checkStatus[0].tim_id1],
         );
 
         await db.execute(
           "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
-          [checkStatus[0].tim_id2]
+          [checkStatus[0].tim_id2],
         );
 
         await db.execute(
           "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
-          [checkStatus[0].tim_id1]
+          [checkStatus[0].tim_id1],
         );
 
         await db.execute(
           "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
-          [checkStatus[0].tim_id2]
+          [checkStatus[0].tim_id2],
         );
 
         await db.execute(
           "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
-          [userId]
+          [userId],
         );
 
         return res.status(200).json({
@@ -116,32 +156,32 @@ export const matchResult = async (req, res) => {
       } else if (checkStatus[0].tim_id2 === tim_menang) {
         await db.execute(
           "UPDATE game_session SET end_time = NOW(), score1 = 1 , score2 = 5 WHERE id = ? AND penpos_id = ?",
-          [game_session_id, userId]
+          [game_session_id, userId],
         );
 
         await db.execute(
           "UPDATE tim SET total_points = total_points + 5, total_coin = total_coin + 5 WHERE user_id = ?",
-          [checkStatus[0].tim_id2]
+          [checkStatus[0].tim_id2],
         );
 
         await db.execute(
           "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
-          [checkStatus[0].tim_id1]
+          [checkStatus[0].tim_id1],
         );
 
         await db.execute(
           "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
-          [checkStatus[0].tim_id1]
+          [checkStatus[0].tim_id1],
         );
 
         await db.execute(
           "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
-          [checkStatus[0].tim_id2]
+          [checkStatus[0].tim_id2],
         );
 
         await db.execute(
           "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
-          [userId]
+          [userId],
         );
 
         return res.status(200).json({
@@ -178,22 +218,22 @@ export const matchResult = async (req, res) => {
       if (result === true) {
         await db.execute(
           "UPDATE game_session SET end_time = NOW(), score1 = 5 WHERE id = ?",
-          [game_session_id]
+          [game_session_id],
         );
 
         await db.execute(
           "UPDATE tim SET total_points = total_points + 5, total_coin = total_coin + 5 WHERE user_id = ?",
-          [tim_id]
+          [tim_id],
         );
 
         await db.execute(
           "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
-          [tim_id]
+          [tim_id],
         );
 
         await db.execute(
           "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
-          [userId]
+          [userId],
         );
 
         res.status(200).json({
@@ -203,21 +243,21 @@ export const matchResult = async (req, res) => {
       } else if (result === false) {
         await db.execute(
           "UPDATE game_session SET end_time = NOW(), score1 = 1 WHERE id = ? ",
-          [game_session_id]
+          [game_session_id],
         );
         await db.execute(
           "UPDATE tim SET total_points = total_points + 1, total_coin = total_coin + 1 WHERE user_id = ?",
-          [tim_id]
+          [tim_id],
         );
 
         await db.execute(
           "UPDATE tim SET status = 'KOSONG', pos_game_id = NULL WHERE user_id = ?",
-          [tim_id]
+          [tim_id],
         );
 
         await db.execute(
           "UPDATE pos_game SET status = 'MENUNGGU' WHERE penpos_id = ?",
-          [userId]
+          [userId],
         );
 
         res.status(200).json({

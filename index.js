@@ -39,7 +39,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server is running lari 50 km!",
+    message: "Server is running lari 500 km!",
   });
 });
 

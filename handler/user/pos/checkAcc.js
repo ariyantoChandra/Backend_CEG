@@ -29,7 +29,7 @@ export const checkAcc = async (req, res) => {
 
     const [game_session] = await db.execute(
       "SELECT g.id FROM user u INNER JOIN game_session g WHERE u.id = ? AND g.end_time IS NULL",
-      [userId]
+      [userId],
     );
 
     if (game_session.length === 0) {
@@ -40,8 +40,8 @@ export const checkAcc = async (req, res) => {
     }
 
     const [pos_name] = await db.execute(
-      "SELECT u.nama_tim FROM user u INNER JOIN game_session g ON u.id = g.penpos_id WHERE g.id = ?",
-      [game_session[0].id]
+      "SELECT name_pos FROM pos_game p INNER JOIN game_session g ON p.penpos_id = g.penpos_id WHERE g.id = ?",
+      [game_session[0].id],
     );
 
     if (pos_name.length === 0) {
@@ -51,8 +51,13 @@ export const checkAcc = async (req, res) => {
       });
     }
 
-    const namaTim = pos_name[0]?.nama_tim;
-    const slugNamaTim = namaTim.toLowerCase().trim().replace(/\s+/g, "-");
+    const namaTim = pos_name[0]?.name_pos;
+    const slugNamaTim = namaTim
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
 
     return res.status(200).json({
       success: true,

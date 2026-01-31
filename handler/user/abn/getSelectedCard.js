@@ -27,7 +27,7 @@ export const getSelectedCard = async (req, res) => {
 
     const [session] = await db.execute(
       "SELECT tim_id1, tim_id2 FROM game_session WHERE id = ?",
-      [game_session_id]
+      [game_session_id],
     );
 
     if (session.length === 0) {
@@ -48,7 +48,7 @@ export const getSelectedCard = async (req, res) => {
 
     const [cards] = await db.execute(
       `SELECT id, selected_card FROM user WHERE id IN (?, ?)`,
-      [tim_id1, tim_id2]
+      [tim_id1, tim_id2],
     );
 
     if (cards.length < 2) {
@@ -76,8 +76,15 @@ export const getSelectedCard = async (req, res) => {
         tim_id1,
         cardMap[tim_id1],
         tim_id2,
-        cardMap[tim_id2]
+        cardMap[tim_id2],
       );
+
+      if (battleResult.result1 === "menang") {
+        await db.execute(
+          "UPDATE game_session SET score1 = score1 + 1 WHERE id = ?",
+          [game_session_id],
+        );
+      }
 
       return res.status(200).json({
         success: true,
@@ -98,8 +105,15 @@ export const getSelectedCard = async (req, res) => {
         tim_id2,
         cardMap[tim_id2],
         tim_id1,
-        cardMap[tim_id1]
+        cardMap[tim_id1],
       );
+
+      if (battleResult.result1 === "menang") {
+        await db.execute(
+          "UPDATE game_session SET score2 = score2 + 1 WHERE id = ?",
+          [game_session_id],
+        );
+      }
 
       return res.status(200).json({
         success: true,

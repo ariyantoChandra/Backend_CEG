@@ -28,7 +28,7 @@ export const checkAcc = async (req, res) => {
     }
 
     const [game_session] = await db.execute(
-      "SELECT g.id FROM user u INNER JOIN game_session g WHERE u.id = ? AND g.end_time IS NULL",
+      "SELECT g.id FROM user u INNER JOIN game_session g ON g.tim_id1 = u.id OR g.tim_id2 = u.id WHERE u.id = ?  AND g.end_time IS NULL",
       [userId],
     );
 

@@ -1,5 +1,6 @@
 import { getPos } from "../handler/penpos/getPos.js";
 import { getListTeam } from "../handler/penpos/getListTeam.js";
+import { getTeamPlaying } from "../handler/penpos/getTeamPlaying.js";
 import { createGameSession } from "../handler/penpos/createGameSession.js";
 import { matchResult } from "../handler/penpos/matchResult.js";
 import { getScore } from "../handler/penpos/getScore.js";
@@ -9,6 +10,7 @@ const router = express.Router();
 
 router.get("/get-pos", getPos);
 router.get("/get-list-team", getListTeam);
+router.get("/get-team-playing", getTeamPlaying);
 router.post("/create-game-session", createGameSession);
 router.post("/get-score", getScore);
 router.post("/match-result", matchResult);

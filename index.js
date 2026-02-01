@@ -26,18 +26,11 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: [
-      "http://localhost:8385",
-      "https://test.cegubaya.com",
-      "https://cegubaya.com",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: true,
     credentials: true,
-  }),
+  })
 );
 
-app.options("*", cors());
 app.use(express.json());
 // tambahan agar bisa membaca form-data non file dan x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));

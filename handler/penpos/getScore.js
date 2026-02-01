@@ -73,18 +73,33 @@ export const getScore = async (req, res) => {
         });
       }
     } else if (role === "PENPOS") {
-      return res.status(200).json({
-        success: true,
-        message: "Jawaban berhasil diproses",
-        data: {
-          tim1: gameSession[0].tim_id1,
-          total_poin1: gameSession[0].score1,
-          nama_tim1: timInfo[0].nama_tim,
-          tim2: gameSession[0].tim_id2,
-          total_poin2: gameSession[0].score2,
-          nama_tim2: timInfo[1].nama_tim,
-        },
-      });
+      if (gameSession[0].tim_id1 === timInfo[0].id) {
+        return res.status(200).json({
+          success: true,
+          message: "Jawaban berhasil diproses",
+          data: {
+            tim1: gameSession[0].tim_id1,
+            total_poin1: gameSession[0].score1,
+            nama_tim1: timInfo[0].nama_tim,
+            tim2: gameSession[0].tim_id2,
+            total_poin2: gameSession[0].score2,
+            nama_tim2: timInfo[1].nama_tim,
+          },
+        });
+      } else if (gameSession[0].tim_id2 === timInfo[0].id) {
+        return res.status(200).json({
+          success: true,
+          message: "Jawaban berhasil diproses",
+          data: {
+            tim1: gameSession[0].tim_id1,
+            total_poin1: gameSession[0].score1,
+            nama_tim1: timInfo[1].nama_tim,
+            tim2: gameSession[0].tim_id2,
+            total_poin2: gameSession[0].score2,
+            nama_tim2: timInfo[0].nama_tim,
+          },
+        });
+      }
     }
   } catch (error) {
     console.error("Error in getAtomicResult:", error);

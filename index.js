@@ -24,7 +24,20 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:8385",
+      "https://test.cegubaya.com",
+      "https://cegubaya.com",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  }),
+);
+
+app.options("*", cors());
 app.use(express.json());
 // tambahan agar bisa membaca form-data non file dan x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
@@ -39,7 +52,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Backend Server is running!",
+    message: "Server is running!",
   });
 });
 

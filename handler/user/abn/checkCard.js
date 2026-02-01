@@ -16,7 +16,7 @@ const battleTable = {
   netral: {
     asam_kuat: "menang",
     asam_lemah: "kalah",
-    netral: "menang",
+    netral: "seri",
     basa_lemah: "kalah",
     basa_kuat: "menang",
   },

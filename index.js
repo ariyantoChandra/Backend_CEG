@@ -33,9 +33,6 @@ app.use(
   }),
 );
 
-// Handle preflight requests
-app.options("*", cors());
-
 app.use(express.json());
 // tambahan agar bisa membaca form-data non file dan x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
@@ -50,7 +47,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server is running!",
+    message: "beken Server is running!",
   });
 });
 

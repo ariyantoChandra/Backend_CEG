@@ -26,8 +26,8 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: true,
-    credentials: true,
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
   }),
 );
 
@@ -45,7 +45,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server is running!",
+    message: "Backend Server is running!",
   });
 });
 

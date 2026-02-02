@@ -29,9 +29,21 @@ export const createGameSession = async (req, res) => {
       });
     }
 
+    const [checkGameSession] = await db.execute(
+      "SELECT * FROM game_session WHERE penpos_id = ? AND end_time IS NULL",
+      [userId],
+    );
+
+    if (checkGameSession.length > 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Masih ada game session yang belum selesai.",
+      });
+    }
+
     const [pos] = await db.execute(
       "SELECT penpos_id, tipe FROM pos_game WHERE penpos_id = ?",
-      [userId]
+      [userId],
     );
 
     if (pos[0].tipe === "BATTLE") {
@@ -46,17 +58,17 @@ export const createGameSession = async (req, res) => {
 
       await db.execute(
         "UPDATE pos_game SET status = 'BERMAIN' WHERE penpos_id = ?",
-        [pos[0].penpos_id]
+        [pos[0].penpos_id],
       );
 
       await db.execute(
         "UPDATE tim SET status = 'BERMAIN' WHERE user_id IN (?, ?)",
-        [tim1, tim2]
+        [tim1, tim2],
       );
 
       const [game_session] = await db.execute(
         "INSERT INTO game_session (`penpos_id`, `tim_id1`, `tim_id2`, `start_time`, `score1`, `score2`) VALUES (?, ?, ?, NOW(), 0, 0)",
-        [pos[0].penpos_id, tim1, tim2]
+        [pos[0].penpos_id, tim1, tim2],
       );
 
       if (game_session.length === 0) {
@@ -88,7 +100,7 @@ export const createGameSession = async (req, res) => {
 
       await db.execute(
         "UPDATE pos_game SET status = 'BERMAIN' WHERE penpos_id = ?",
-        [pos[0].penpos_id]
+        [pos[0].penpos_id],
       );
 
       await db.execute("UPDATE tim SET status = 'BERMAIN' WHERE user_id = ?", [
@@ -97,7 +109,7 @@ export const createGameSession = async (req, res) => {
 
       const [game_session] = await db.execute(
         "INSERT INTO game_session (`penpos_id`, `tim_id1`, `start_time`, `score1`) VALUES (?, ?, NOW(), 0)",
-        [pos[0].penpos_id, tim1]
+        [pos[0].penpos_id, tim1],
       );
 
       if (game_session.length === 0) {

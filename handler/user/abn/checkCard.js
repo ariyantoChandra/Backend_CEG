@@ -30,7 +30,7 @@ const battleTable = {
   basa_kuat: {
     asam_kuat: "seri",
     asam_lemah: "menang",
-    netral: "seri",
+    netral: "seri", //jangan lupa cek menang kalah lagi tunggu acara
     basa_lemah: "menang",
     basa_kuat: "seri",
   },

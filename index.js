@@ -27,9 +27,14 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false,
   }),
 );
+
+// Handle preflight requests
+app.options("*", cors());
 
 app.use(express.json());
 // tambahan agar bisa membaca form-data non file dan x-www-form-urlencoded
@@ -45,7 +50,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Backend Server is running!",
+    message: "Server is running!",
   });
 });
 

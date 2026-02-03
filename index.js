@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import cors from "cors";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -22,6 +23,13 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  }),
+);
+
 // Middleware
 app.use(express.json());
 // tambahan agar bisa membaca form-data non file dan x-www-form-urlencoded
@@ -37,7 +45,7 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 // Endpoint cek server
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server is running!",
+    message: "Backend Server is running!",
   });
 });
 

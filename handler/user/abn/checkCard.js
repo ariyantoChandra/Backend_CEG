@@ -2,14 +2,14 @@ const battleTable = {
   asam_kuat: {
     asam_kuat: "seri",
     asam_lemah: "menang",
-    netral: "seri",
+    netral: "kalah",
     basa_lemah: "menang",
     basa_kuat: "seri",
   },
   asam_lemah: {
     asam_kuat: "kalah",
     asam_lemah: "seri",
-    netral: "kalah",
+    netral: "menang",
     basa_lemah: "seri",
     basa_kuat: "kalah",
   },
@@ -23,14 +23,14 @@ const battleTable = {
   basa_lemah: {
     asam_kuat: "kalah",
     asam_lemah: "seri",
-    netral: "kalah",
+    netral: "menang",
     basa_lemah: "seri",
     basa_kuat: "kalah",
   },
   basa_kuat: {
     asam_kuat: "seri",
     asam_lemah: "menang",
-    netral: "seri", //jangan lupa cek menang kalah lagi tunggu acara
+    netral: "kalah",
     basa_lemah: "menang",
     basa_kuat: "seri",
   },
